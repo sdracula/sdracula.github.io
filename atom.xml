@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2022-05-01T02:21:44.364Z</updated>
+  <updated>2022-05-04T16:14:02.417Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>随笔#20220504</title>
+    <link href="/2022/05/05/Daily20220504/"/>
+    <id>/2022/05/05/Daily20220504/</id>
+    <published>2022-05-04T16:12:00.000Z</published>
+    <updated>2022-05-04T16:14:02.417Z</updated>
+    
+    <summary type="html">
+    
+      所思
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="随笔" scheme="/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="日记" scheme="/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>随笔#20220501</title>
