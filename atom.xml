@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2022-05-04T16:14:02.417Z</updated>
+  <updated>2022-05-11T16:55:42.660Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于深度学习的三维人脸重建#01：介绍</title>
+    <link href="/2022/05/12/3DFaceRestruction01/"/>
+    <id>/2022/05/12/3DFaceRestruction01/</id>
+    <published>2022-05-11T16:54:30.000Z</published>
+    <updated>2022-05-11T16:55:42.660Z</updated>
+    
+    <summary type="html">
+    
+      介绍基于深度学习三维人脸重建的研究目的、研究难点、研究现状
+    
+    </summary>
+    
+      <category term="科研" scheme="/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    
+      <category term="计算机视觉" scheme="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+      <category term="三维人脸重建" scheme="/tags/%E4%B8%89%E7%BB%B4%E4%BA%BA%E8%84%B8%E9%87%8D%E5%BB%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>随笔#20220504</title>
@@ -65,7 +87,7 @@
     <link href="/2022/04/29/Hexo01/"/>
     <id>/2022/04/29/Hexo01/</id>
     <published>2022-04-29T15:20:00.000Z</published>
-    <updated>2022-05-01T05:49:44.104Z</updated>
+    <updated>2022-05-11T15:39:49.450Z</updated>
     
     <summary type="html">
     
