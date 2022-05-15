@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2022-05-15T15:42:52.533Z</updated>
+  <updated>2022-05-15T16:11:15.153Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/2022/05/15/Daily20220515/"/>
     <id>/2022/05/15/Daily20220515/</id>
     <published>2022-05-15T15:31:03.000Z</published>
-    <updated>2022-05-15T15:42:52.533Z</updated>
+    <updated>2022-05-15T16:11:15.153Z</updated>
     
     <summary type="html">
     
@@ -30,7 +30,7 @@
         
         
           &lt;h1 id=&quot;崩溃&quot;&gt;&lt;a href=&quot;#崩溃&quot; class=&quot;headerlink&quot; title=&quot;崩溃&quot;&gt;&lt;/a&gt;崩溃&lt;/h1&gt;&lt;p&gt;好不容易改了模型，debug完，loss训练到0.2，结果测试一下直接无语了。&lt;/p&gt;
-&lt;h2 id=&quot;原版PRNEt&quot;&gt;&lt;a
+&lt;h2 id=&quot;原图&quot;&gt;&lt;a href=&quot;#原图&quot;
         
       
     
