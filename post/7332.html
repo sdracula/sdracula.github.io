@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">lab | Sandy</title>
+  <title itemprop="name">Hexo支线#01 | Sandy</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -239,54 +239,199 @@
   </div>
 </header>
 
-        <div class="pattern-center-blank"></div>
-  
-    <div class="pattern-center ">
-      <div class="pattern-attachment-img">
-        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/lab.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-      </div>
-      <header class="pattern-header ">
-        <h1 class="entry-title">
-        Lab实验室</h1>
-      </header>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
     </div>
-  
-  <div id="content" class="site-content">
-    <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-      <h2 id="sakura主题"><a href="#sakura主题" class="headerlink" title="sakura主题"></a>sakura主题</h2><p>balabala</p>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Hexo支线#01</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://sdracula.github.io">
+            <img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/joker.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="https://sdracula.github.io">Sandy</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2023-3-29<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
 
-      <!-- .entry-content -->
-      
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>时隔一年，终于又有时间更新博客了，好耶！之前的电脑进水了，不过还好文件都有备份，所以是在新电脑上重新配置。</p>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>建议安装低于14的版本，否则可能会出现与Hexo不兼容的情况，导致页面空白。</p>
+<pre><code class="bash">conda install -c conda-forge/label/cf202003 nodejs
+</code></pre>
+<h2 id="Hexo安装、初始化与预览"><a href="#Hexo安装、初始化与预览" class="headerlink" title="Hexo安装、初始化与预览"></a>Hexo安装、初始化与预览</h2><p>1.使用Npm安装Hexo</p>
+<pre><code class="bash">install -g hexo-cli
+</code></pre>
+<p>2.Hexo初始化</p>
+<pre><code class="bash">hexo init
+</code></pre>
+<p>3.安装依赖</p>
+<pre><code class="bash">npm install
+</code></pre>
+<p>4.本地预览</p>
+<pre><code class="bash">hexo g #生成页面：将Markdown文件转换成Html文件。
+hexo s #启动服务：启动本地服务器进行预览。
+</code></pre>
+<p>5.访问地址：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>出现Hexo的Hello World页面即成功。</p>
+<h2 id="部署Hexo到Github-Pages托管"><a href="#部署Hexo到Github-Pages托管" class="headerlink" title="部署Hexo到Github Pages托管"></a>部署Hexo到Github Pages托管</h2><p>1.安装Hexo-deployer-git:</p>
+<pre><code class="cmd">npm install hexo-deployer-git --save
+</code></pre>
+<p>2.连接Github<br>注册Github账户，并在本地安装Git。<br>在命令行中设置用户名和邮箱：</p>
+<pre><code class="cmd">git config --global user.name &quot;Your GitHub Username&quot;
+git config --global user.email &quot;Your GitHub Email address&quot;
+</code></pre>
+<p>创建SSH密钥：</p>
+<pre><code class="cmd">ssh-keygen -t rsa -C &quot;Your GitHub Email address&quot;
+</code></pre>
+<p>在C:\Users\用户名.ssh中用记事本打开隐藏的id_rsa.pub文件并复制其中内容。<br>在Github的Settings页面中选择SSH and GPG keys，并点击New SSH Key，Title可任意输入，在Key中输入复制的内容，然后点击Add SSh key。</p>
+<p>3.按修改_config.yml文件末尾Deployment配置，按如下操作：</p>
+<pre><code class="_config.yml">deploy:
+  type: git
+  # repository: git@github.com:用户名/用户名.github.io.git # SSH连接
+  # repository: https://github.com/sdracula/sdracula.github.io.git # https连接
+  branch: main
+</code></pre>
+<p>4.上传文件至Github</p>
+<pre><code class="cmd">hexo d
+</code></pre>
 
-
-
-      <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-      <footer class="post-footer">
-        <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-        <div class="post-tags">
         </div>
-        <div class="post-share">
-          <div class="social-share sharehidden share-component"></div>
-          <i class="iconfont show-share icon-forward"></i>
-        </div>
-      </footer><!-- .entry-footer -->
-    </article>
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
       <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/post/10728.html" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Pytorch#D01:数据操作</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/post/6356.html" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Daily20220515</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+    <div id="waline"></div>
+    <style>
+    #waline textarea {
+        box-sizing: border-box;
+        background: url("https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich2.gif") 100% 100% no-repeat;
+    }
+    </style>
+    <script>
+        Waline({
+              el: '#waline',
+              serverURL: '',
+              pageSize: '10',
+              lang: 'zh-CN',
+              requiredFields: ['nick','mail'], //设置必填项
+              placeholder: '祝开开心心！',
+              visitor: 'true',
+              emoji: [
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
+              ],
+              avatar: 'mp',
+              dark: 'auto',
+            });
+    </script>
+
+
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/joker.jpg" itemprop="image" alt="Sandy" height="70" width="70"></a>
+          <a href="https://sdracula.github.io" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/joker.jpg" itemprop="image" alt="Sandy" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="https://sdracula.github.io/" itemprop="url" rel="author">Sandy</a>
+            <a href="https://sdracula.github.io" itemprop="url" rel="author">Sandy</a>
             </h3>
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>病树历火，繁花寥落雏芽生。</p>
+        <p><i class="iconfont icon-write"></i>病树历火，繁华寥落雏芽生。</p>
       </section>
+    </main><!-- #main -->
   </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

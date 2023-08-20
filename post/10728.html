@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">基于深度学习的三维人脸重建#01：介绍 | Sandy</title>
+  <title itemprop="name">Pytorch#D01:数据操作 | Sandy</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -245,11 +245,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      基于深度学习的三维人脸重建#01：介绍</h1>
+      Pytorch#D01:数据操作</h1>
       <p class="entry-census">
         <span>
           <a href="https://sdracula.github.io">
@@ -261,7 +261,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2022-5-12<span class="bull">
+        2023-4-2<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -275,35 +275,101 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>人脸是人类最重要的身份特征之一。而相较于容易获取的二维人脸图片，三维人脸携带了更为完整的个人特征信息也就是人脸的三维空间数据。<br><img src="https://raw.githubusercontent.com/sdracula/Img/main/emma_3d.jpg" alt></p>
-<h1 id="传统三维人脸重建"><a href="#传统三维人脸重建" class="headerlink" title="传统三维人脸重建"></a>传统三维人脸重建</h1><p>随着三维人脸重建技术的发展，三维人脸也逐渐走入我们的生活。我们平时可能都使用过支付宝的刷脸支付，我们在付款时只需要将人脸对准在识别区域内，就可以轻松付款。这一支付方式正是应用了基于三维结构光的三维人脸重建技术。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/pay.jpeg" alt></p>
-<p>不只是支付安保领域，三维人脸重建技术也经常出现在影视娱乐领域中。在番剧刀剑神域中，主角们在虚拟游戏世界中的形象与现实世界中的形象完全相同也正是因为头戴式设备的扫描功能。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/SWO.jpg" alt></p>
-<p>我们能看到像<a href="https://scilaboratory.com/res.html" target="_blank" rel="noopener">南京理工大学左超教授智能计算实验室团队</a>的基于SLAM的快速三维建模技术和三维人脸测量技术在精度和设备约束上做出了一定的突破。</p>
-<h1 id="现代三维人脸重建技术"><a href="#现代三维人脸重建技术" class="headerlink" title="现代三维人脸重建技术"></a>现代三维人脸重建技术</h1><p>那么为什么三维人脸重建技术并没有更进一步地应用并普及到我们的生活中？</p>
-<p>在我看来，传统的三维人脸重建技术受限于结构光学设备，且往往受到环境与姿态的约束，在成本和可及性上都存在着一定的障碍。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/chaozuo.jpg" alt></p>
-<p>但是三维人脸重建技术能否彻底摆脱设备限制，摆脱环境姿态等约束，仅仅根据一张普通的图片进行？</p>
-<p>对此，现代三维人脸重建技术作出了它的回答。现代三维人脸重建技术通过图像信息进行三维人脸重建，在一定程度上解决了这些问题。</p>
-<p>现代三维人脸重建技术可以分为基于模型驱动的三维人脸重建技术和基于数据驱动（即基于深度学习）的三维人脸重建技术。</p>
-<h2 id="基于模型驱动的三维人脸重建技术"><a href="#基于模型驱动的三维人脸重建技术" class="headerlink" title="基于模型驱动的三维人脸重建技术"></a>基于模型驱动的三维人脸重建技术</h2><p>1999 年，瑞士巴塞尔大学的科学家Blanz 和Vetter 提出了三维可形变模型（3DMM）。基于模型驱动的三维人脸重建技术以3DMM为核心，旨在将三维人脸数据低维化来建立一个平均人脸模型，并在其基础上拟合相关系数，从而重建三维人脸模型。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/3DMM.png" alt></p>
-<p>基于模型的三维人脸技术同时也受到数据集不易采集和空间信息损失较大的限制，在精度上表现得差强人意。</p>
-<h2 id="基于数据驱动（深度学习）的三维人脸重建技术"><a href="#基于数据驱动（深度学习）的三维人脸重建技术" class="headerlink" title="基于数据驱动（深度学习）的三维人脸重建技术"></a>基于数据驱动（深度学习）的三维人脸重建技术</h2><p>随着深度学习近些年来的突飞猛进，我们似乎有了处理复杂模型和大量三维空间数据的能力，基于深度学习的三维人脸重建技术应运而生。</p>
-<h3 id="采用全监督方法进行参数回归"><a href="#采用全监督方法进行参数回归" class="headerlink" title="采用全监督方法进行参数回归"></a>采用全监督方法进行参数回归</h3><p>最初基于深度学习的三维人脸重建技术的发展方向在于以何种方式将深度学习与三维人脸模型相结合才能够达到较好的重建效果。</p>
-<p>具有代表性的工作有Richardson等人在2017年提出的由CoarseNet和FineNet组成的CNN结构。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/coarsefine.png" alt></p>
-<p>全监督回归方法虽然能够回归模型参数，仍未能摆脱低维模型参数空间对于精度的限制，在细节重建效果上的表现差强人意。</p>
-<h3 id="采用自监督方法端到端地进行回归"><a href="#采用自监督方法端到端地进行回归" class="headerlink" title="采用自监督方法端到端地进行回归"></a>采用自监督方法端到端地进行回归</h3><p>针对以上问题，许多工作通过对人脸三维特征进行编码以更好地发挥神经网络的回归能力。</p>
-<p>VRNet（Volumetric Regression Network）通过体素回归的方式，摆脱模型的限制，在精度上取得了新的突破。但体素同时也是一把双刃剑，这是因为整个三维人脸的体素不仅包括了人脸表面顶点部分，还包括了人脸下的大量无用数据，导致计算量过大。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/VRNetPreview.png" alt></p>
-<p>不同的是，PRNet(Position map Regression Network)利用UV位置图(UV position map)来描述3D形状。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/UVMap.jpg" alt></p>
-<p>PRNet将三维人脸映射到UV位置图上并通过一个简单的编码器-解码器结构的网络预测UV位置图坐标。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/PNetwork.jpg" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/PRNEtout.png" alt></p>
-<h2 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h2><p>随着Unet、Transformer、Attention注意力机制的流行屠榜，我们能否将这些新生代优秀的模型机制应用到三维人脸重建领域当中，让过去几年里优秀的工作重获新生？</p>
+          <h1 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h1><p>深度学习存储和操作数据的主要接口是张量（𝑛维数组）。它提供了各种功能，包括基本数学运算、广播、索引、切片、内存节省和转换其他Python对象。</p>
+<h2 id="张量属性"><a href="#张量属性" class="headerlink" title="张量属性"></a>张量属性</h2><ol>
+<li>创建有序整数张量：arrange属性<pre><code>x = torch.arrange(12)
+x
+</code></pre><pre><code>tensor([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+</code></pre></li>
+<li>访问张量形状：shape属性<pre><code>x.shape
+</code></pre><pre><code>torch.Size([12])
+</code></pre></li>
+<li>访问张量元素总数（大小）：numel方法<pre><code>x.numel()
+</code></pre><pre><code>12
+</code></pre></li>
+<li>改变张量形状<pre><code>X = x.reshape(3,4)
+X
+</code></pre><pre><code>tensor([[ 0,  1,  2,  3],
+     [ 4,  5,  6,  7],
+     [ 8,  9, 10, 11]])
+</code></pre></li>
+<li>矩阵初始化<pre><code>torch.zeros((2, 3, 4))
+torch.ones((2, 3, 4))
+torch.randn(3, 4)
+torch.tensor([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
+</code></pre><h2 id="张量运算"><a href="#张量运算" class="headerlink" title="张量运算"></a>张量运算</h2></li>
+<li>按元素操作<pre><code>x = torch.tensor([1.0, 2, 4, 8])
+y = torch.tensor([2, 2, 2, 2])
+x + y, x - y, x * y, x / y, x ** y  # **运算符是求幂运算
+torch.exp(x)
+</code></pre></li>
+<li>多个张量连结<pre><code>X = torch.arange(12, dtype=torch.float32).reshape((3,4))
+Y = torch.tensor([[2.0, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
+torch.cat((X, Y), dim=0), torch.cat((X, Y), dim=1)
+</code></pre><pre><code>(tensor([[ 0.,  1.,  2.,  3.],
+      [ 4.,  5.,  6.,  7.],
+      [ 8.,  9., 10., 11.],
+      [ 2.,  1.,  4.,  3.],
+      [ 1.,  2.,  3.,  4.],
+      [ 4.,  3.,  2.,  1.]]),
+tensor([[ 0.,  1.,  2.,  3.,  2.,  1.,  4.,  3.],
+      [ 4.,  5.,  6.,  7.,  1.,  2.,  3.,  4.],
+      [ 8.,  9., 10., 11.,  4.,  3.,  2.,  1.]]))
+</code></pre></li>
+<li>逻辑运算<pre><code>X == Y
+</code></pre><pre><code>tensor([[False,  True, False,  True],
+     [False, False, False, False],
+     [False, False, False, False]])
+</code></pre>4.求和<pre><code>X.sum() #对张量中的所有元素进行求和，会产生一个单元素张量。
+</code></pre><pre><code>tensor(66.)
+</code></pre><h2 id="广播机制"><a href="#广播机制" class="headerlink" title="广播机制"></a>广播机制</h2>在两个张量形状不同的情况下，调用广播机制（broadcasting mechanism）执行按元素操作。<br>工作方式:<br>1.通过适当复制元素来扩展一个或两个数组，以便在转换之后，两个张量具有相同的形状；<br>2.对生成的数组执行按元素操作。<pre><code>a = torch.arange(3).reshape((3, 1))
+b = torch.arange(2).reshape((1, 2))
+a, b
+</code></pre><pre><code>(tensor([[0],
+      [1],
+      [2]]),
+tensor([[0, 1]]))
+</code></pre><pre><code>a + b
+</code></pre><pre><code>tensor([[0, 1],
+     [1, 2],
+     [2, 3]])
+</code></pre><h2 id="索引和切片"><a href="#索引和切片" class="headerlink" title="索引和切片"></a>索引和切片</h2>与Python数组相同，第一个元素的索引是0，最后一个元素的索引是-1。[m,n]包括了第m到n-1个元素<pre><code>X[-1], X[1:3]
+X[1, 2] = 9
+X
+X[0:2, :] = 12
+X
+</code></pre><pre><code>(tensor([ 8.,  9., 10., 11.]),
+tensor([[ 4.,  5.,  6.,  7.],
+      [ 8.,  9., 10., 11.]]))
+tensor([[ 0.,  1.,  2.,  3.],
+     [ 4.,  5.,  9.,  7.],
+     [ 8.,  9., 10., 11.]])
+tensor([[12., 12., 12., 12.],
+     [12., 12., 12., 12.],
+     [ 8.,  9., 10., 11.]])
+</code></pre><h2 id="节省内存"><a href="#节省内存" class="headerlink" title="节省内存"></a>节省内存</h2>运行一些操作可能为新结果分配内存。<br>例如Y = X + Y, Y会指向一个为X + Y分配的新地址。<pre><code>before = id(Y) #id()函数给我们提供了内存中引用对象的确切地址
+Y = Y + X
+id(Y) == before
+</code></pre><pre><code>False
+</code></pre>运行Y = Y + X后，我们会发现id(Y)指向另一个位置。 这是因为Python首先计算Y + X，为结果分配新的内存，然后使Y指向内存中的这个新位置。<br>这可能是不可取的，原因有两个：<br>1.我们不想总是不必要地分配内存。在机器学习中，我们可能有数百兆的参数，并且在一秒内多次更新所有参数。通常情况下，我们希望原地执行这些更新；<br>2.如果我们不原地更新，其他引用仍然会指向旧的内存位置，这样我们的某些代码可能会无意中引用旧的参数。<h3 id="原地操作"><a href="#原地操作" class="headerlink" title="原地操作"></a>原地操作</h3>1.我们可以使用切片表示法将操作的结果分配给先前分配的数组，例如Y[:] = <expression>。 我们首先创建一个新的矩阵Z，其形状与另一个Y相同， 使用zeros_like来分配一个全 0<br>的块。<pre><code>Z = torch.zeros_like(Y)
+print(&#39;id(Z):&#39;, id(Z))
+Z[:] = X + Y
+print(&#39;id(Z):&#39;, id(Z))
+</code></pre><pre><code>id(Z): 1925677330576
+id(Z): 1925677330576
+</code></pre>2.如果在后续计算中没有重复使用X， 我们也可以使用X[:] = X + Y或X += Y来减少操作的内存开销。<pre><code>before = id(X)
+X += Y
+id(X) == before
+</code></pre><pre><code>True
+</code></pre><h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2>1.torch张量和numpy张量(ndarray)互相转换。<pre><code>A = X.numpy()
+B = torch.tensor(A)
+type(A), type(B)
+</code></pre><pre><code>(numpy.ndarray, torch.Tensor)
+</code></pre>2.将大小为1的张量转换为Python标量<br>调用item函数或Python的内置函数。<pre><code>a = torch.tensor([3.5])
+a, a.item(), float(a), int(a)
+</code></pre><pre><code>(tensor([3.5000]), 3.5, 3.5, 3)
+</code></pre></expression></li>
+</ol>
 
         </div>
         <!-- .entry-content -->
@@ -325,15 +391,15 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/2022/05/15/Daily20220515/" rel="prev">
+            <a href="/post/11405.html" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                Daily20220515</h3>
+                一键将CSDN博客保存为PDF文件</h3>
                 <hr>
               </div>
             </a>
@@ -343,15 +409,15 @@
           
             <div class="post-nepre half next">
           
-            <a href="/2022/05/05/Daily20220504/" rel="next">
+            <a href="/post/7332.html" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/smy.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/smy.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                随笔#20220504</h3>
+                Hexo支线#01</h3>
                 <hr>
               </div>
             </a>
@@ -454,7 +520,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2022 Sandy<br>
+      &copy; 2023 Sandy<br>
       powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
