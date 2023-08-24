@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Pytorch#D01:数据操作 | Sandy</title>
+  <title itemprop="name">Hexo支线#01 | Sandy</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -245,11 +245,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Pytorch#D01:数据操作</h1>
+      Hexo支线#01</h1>
       <p class="entry-census">
         <span>
           <a href="https://sdracula.github.io">
@@ -261,7 +261,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2023-4-2<span class="bull">
+        2023-3-29<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -275,101 +275,45 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h1><p>深度学习存储和操作数据的主要接口是张量（𝑛维数组）。它提供了各种功能，包括基本数学运算、广播、索引、切片、内存节省和转换其他Python对象。</p>
-<h2 id="张量属性"><a href="#张量属性" class="headerlink" title="张量属性"></a>张量属性</h2><ol>
-<li>创建有序整数张量：arrange属性<pre><code>x = torch.arrange(12)
-x
-</code></pre><pre><code>tensor([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
-</code></pre></li>
-<li>访问张量形状：shape属性<pre><code>x.shape
-</code></pre><pre><code>torch.Size([12])
-</code></pre></li>
-<li>访问张量元素总数（大小）：numel方法<pre><code>x.numel()
-</code></pre><pre><code>12
-</code></pre></li>
-<li>改变张量形状<pre><code>X = x.reshape(3,4)
-X
-</code></pre><pre><code>tensor([[ 0,  1,  2,  3],
-     [ 4,  5,  6,  7],
-     [ 8,  9, 10, 11]])
-</code></pre></li>
-<li>矩阵初始化<pre><code>torch.zeros((2, 3, 4))
-torch.ones((2, 3, 4))
-torch.randn(3, 4)
-torch.tensor([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
-</code></pre><h2 id="张量运算"><a href="#张量运算" class="headerlink" title="张量运算"></a>张量运算</h2></li>
-<li>按元素操作<pre><code>x = torch.tensor([1.0, 2, 4, 8])
-y = torch.tensor([2, 2, 2, 2])
-x + y, x - y, x * y, x / y, x ** y  # **运算符是求幂运算
-torch.exp(x)
-</code></pre></li>
-<li>多个张量连结<pre><code>X = torch.arange(12, dtype=torch.float32).reshape((3,4))
-Y = torch.tensor([[2.0, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
-torch.cat((X, Y), dim=0), torch.cat((X, Y), dim=1)
-</code></pre><pre><code>(tensor([[ 0.,  1.,  2.,  3.],
-      [ 4.,  5.,  6.,  7.],
-      [ 8.,  9., 10., 11.],
-      [ 2.,  1.,  4.,  3.],
-      [ 1.,  2.,  3.,  4.],
-      [ 4.,  3.,  2.,  1.]]),
-tensor([[ 0.,  1.,  2.,  3.,  2.,  1.,  4.,  3.],
-      [ 4.,  5.,  6.,  7.,  1.,  2.,  3.,  4.],
-      [ 8.,  9., 10., 11.,  4.,  3.,  2.,  1.]]))
-</code></pre></li>
-<li>逻辑运算<pre><code>X == Y
-</code></pre><pre><code>tensor([[False,  True, False,  True],
-     [False, False, False, False],
-     [False, False, False, False]])
-</code></pre>4.求和<pre><code>X.sum() #对张量中的所有元素进行求和，会产生一个单元素张量。
-</code></pre><pre><code>tensor(66.)
-</code></pre><h2 id="广播机制"><a href="#广播机制" class="headerlink" title="广播机制"></a>广播机制</h2>在两个张量形状不同的情况下，调用广播机制（broadcasting mechanism）执行按元素操作。<br>工作方式:<br>1.通过适当复制元素来扩展一个或两个数组，以便在转换之后，两个张量具有相同的形状；<br>2.对生成的数组执行按元素操作。<pre><code>a = torch.arange(3).reshape((3, 1))
-b = torch.arange(2).reshape((1, 2))
-a, b
-</code></pre><pre><code>(tensor([[0],
-      [1],
-      [2]]),
-tensor([[0, 1]]))
-</code></pre><pre><code>a + b
-</code></pre><pre><code>tensor([[0, 1],
-     [1, 2],
-     [2, 3]])
-</code></pre><h2 id="索引和切片"><a href="#索引和切片" class="headerlink" title="索引和切片"></a>索引和切片</h2>与Python数组相同，第一个元素的索引是0，最后一个元素的索引是-1。[m,n]包括了第m到n-1个元素<pre><code>X[-1], X[1:3]
-X[1, 2] = 9
-X
-X[0:2, :] = 12
-X
-</code></pre><pre><code>(tensor([ 8.,  9., 10., 11.]),
-tensor([[ 4.,  5.,  6.,  7.],
-      [ 8.,  9., 10., 11.]]))
-tensor([[ 0.,  1.,  2.,  3.],
-     [ 4.,  5.,  9.,  7.],
-     [ 8.,  9., 10., 11.]])
-tensor([[12., 12., 12., 12.],
-     [12., 12., 12., 12.],
-     [ 8.,  9., 10., 11.]])
-</code></pre><h2 id="节省内存"><a href="#节省内存" class="headerlink" title="节省内存"></a>节省内存</h2>运行一些操作可能为新结果分配内存。<br>例如Y = X + Y, Y会指向一个为X + Y分配的新地址。<pre><code>before = id(Y) #id()函数给我们提供了内存中引用对象的确切地址
-Y = Y + X
-id(Y) == before
-</code></pre><pre><code>False
-</code></pre>运行Y = Y + X后，我们会发现id(Y)指向另一个位置。 这是因为Python首先计算Y + X，为结果分配新的内存，然后使Y指向内存中的这个新位置。<br>这可能是不可取的，原因有两个：<br>1.我们不想总是不必要地分配内存。在机器学习中，我们可能有数百兆的参数，并且在一秒内多次更新所有参数。通常情况下，我们希望原地执行这些更新；<br>2.如果我们不原地更新，其他引用仍然会指向旧的内存位置，这样我们的某些代码可能会无意中引用旧的参数。<h3 id="原地操作"><a href="#原地操作" class="headerlink" title="原地操作"></a>原地操作</h3>1.我们可以使用切片表示法将操作的结果分配给先前分配的数组，例如Y[:] = <expression>。 我们首先创建一个新的矩阵Z，其形状与另一个Y相同， 使用zeros_like来分配一个全 0<br>的块。<pre><code>Z = torch.zeros_like(Y)
-print(&#39;id(Z):&#39;, id(Z))
-Z[:] = X + Y
-print(&#39;id(Z):&#39;, id(Z))
-</code></pre><pre><code>id(Z): 1925677330576
-id(Z): 1925677330576
-</code></pre>2.如果在后续计算中没有重复使用X， 我们也可以使用X[:] = X + Y或X += Y来减少操作的内存开销。<pre><code>before = id(X)
-X += Y
-id(X) == before
-</code></pre><pre><code>True
-</code></pre><h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2>1.torch张量和numpy张量(ndarray)互相转换。<pre><code>A = X.numpy()
-B = torch.tensor(A)
-type(A), type(B)
-</code></pre><pre><code>(numpy.ndarray, torch.Tensor)
-</code></pre>2.将大小为1的张量转换为Python标量<br>调用item函数或Python的内置函数。<pre><code>a = torch.tensor([3.5])
-a, a.item(), float(a), int(a)
-</code></pre><pre><code>(tensor([3.5000]), 3.5, 3.5, 3)
-</code></pre></expression></li>
-</ol>
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>时隔一年，终于又有时间更新博客了，好耶！之前的电脑进水了，不过还好文件都有备份，所以是在新电脑上重新配置。</p>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>建议安装低于14的版本，否则可能会出现与Hexo不兼容的情况，导致页面空白。</p>
+<pre><code class="bash">conda install -c conda-forge/label/cf202003 nodejs
+</code></pre>
+<h2 id="Hexo安装、初始化与预览"><a href="#Hexo安装、初始化与预览" class="headerlink" title="Hexo安装、初始化与预览"></a>Hexo安装、初始化与预览</h2><p>1.使用Npm安装Hexo</p>
+<pre><code class="bash">install -g hexo-cli
+</code></pre>
+<p>2.Hexo初始化</p>
+<pre><code class="bash">hexo init
+</code></pre>
+<p>3.安装依赖</p>
+<pre><code class="bash">npm install
+</code></pre>
+<p>4.本地预览</p>
+<pre><code class="bash">hexo g #生成页面：将Markdown文件转换成Html文件。
+hexo s #启动服务：启动本地服务器进行预览。
+</code></pre>
+<p>5.访问地址：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>出现Hexo的Hello World页面即成功。</p>
+<h2 id="部署Hexo到Github-Pages托管"><a href="#部署Hexo到Github-Pages托管" class="headerlink" title="部署Hexo到Github Pages托管"></a>部署Hexo到Github Pages托管</h2><p>1.安装Hexo-deployer-git:</p>
+<pre><code class="cmd">npm install hexo-deployer-git --save
+</code></pre>
+<p>2.连接Github<br>注册Github账户，并在本地安装Git。<br>在命令行中设置用户名和邮箱：</p>
+<pre><code class="cmd">git config --global user.name &quot;Your GitHub Username&quot;
+git config --global user.email &quot;Your GitHub Email address&quot;
+</code></pre>
+<p>创建SSH密钥：</p>
+<pre><code class="cmd">ssh-keygen -t rsa -C &quot;Your GitHub Email address&quot;
+</code></pre>
+<p>在C:\Users\用户名.ssh中用记事本打开隐藏的id_rsa.pub文件并复制其中内容。<br>在Github的Settings页面中选择SSH and GPG keys，并点击New SSH Key，Title可任意输入，在Key中输入复制的内容，然后点击Add SSh key。</p>
+<p>3.按修改_config.yml文件末尾Deployment配置，按如下操作：</p>
+<pre><code class="_config.yml">deploy:
+  type: git
+  # repository: git@github.com:用户名/用户名.github.io.git # SSH连接
+  # repository: https://github.com/sdracula/sdracula.github.io.git # https连接
+  branch: main
+</code></pre>
+<p>4.上传文件至Github</p>
+<pre><code class="cmd">hexo d
+</code></pre>
 
         </div>
         <!-- .entry-content -->
@@ -391,15 +335,15 @@ a, a.item(), float(a), int(a)
           
             <div class="post-nepre half previous">
           
-            <a href="/post/11405.html" rel="prev">
+            <a href="/2023/04/02/Pytorch-D01-数据操作/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                一键将CSDN博客保存为PDF文件</h3>
+                Pytorch#D01:数据操作</h3>
                 <hr>
               </div>
             </a>
@@ -409,15 +353,15 @@ a, a.item(), float(a), int(a)
           
             <div class="post-nepre half next">
           
-            <a href="/post/7332.html" rel="next">
+            <a href="/2022/05/15/Daily20220515/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                Hexo支线#01</h3>
+                Daily20220515</h3>
                 <hr>
               </div>
             </a>

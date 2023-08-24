@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Daily20220515 | Sandy</title>
+  <title itemprop="name">Python 类的理解与使用 | Sandy</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -245,11 +245,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Python.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Python.png">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Daily20220515</h1>
+      Python 类的理解与使用</h1>
       <p class="entry-census">
         <span>
           <a href="https://sdracula.github.io">
@@ -261,7 +261,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2022-5-15<span class="bull">
+        2023-8-24<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -275,11 +275,57 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="崩溃"><a href="#崩溃" class="headerlink" title="崩溃"></a>崩溃</h1><p>好不容易改了模型，debug完，loss训练到0.2，结果测试一下直接无语了。</p>
-<h2 id="原图"><a href="#原图" class="headerlink" title="原图"></a>原图</h2><p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/jml.jpg" alt></p>
-<h2 id="原版PRNEt"><a href="#原版PRNEt" class="headerlink" title="原版PRNEt"></a>原版PRNEt</h2><p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/PRNETtest2.png" alt></p>
-<h2 id="自己修改后的PRNet"><a href="#自己修改后的PRNet" class="headerlink" title="自己修改后的PRNet"></a>自己修改后的PRNet</h2><p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/PRNETtest1.png" alt></p>
-<p>我愿称之为三维人脸破坏。</p>
+          <h2 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h2><blockquote>
+<p>类（class），是具有相同特性（属性）和（方法）的对象（实例）的抽象模板。</p>
+<ul>
+<li>实例：同属于一类的不同具体事物。</li>
+<li>属性：类中所有的变量。</li>
+<li>方法：类中所有的函数。</li>
+</ul>
+</blockquote>
+<pre><code class="创建一个名为Animal的类">class Animal:
+    age = 0
+    def _init_(self,class):
+        self.name = name    
+    def run(self):
+        print(f&quot;{self.name}跑起来了&quot;)
+</code></pre>
+<p>其中，</p>
+<ul>
+<li><code>Animal</code>是类名。</li>
+<li><code>_init_</code>是构造函数，用于实例的初始化。</li>
+<li><code>self.name</code>是实例属性，age是类属性。</li>
+<li><code>run</code>是方法。</li>
+</ul>
+<pre><code>class Animal:
+    ...
+class Animal():
+    ...
+class Animal(object):
+    ...
+</code></pre><h2 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h2><pre><code class="实例化">class Animal:
+    def _init_(self,name):
+        self.name = name
+    def run(self):
+        print(f&quot;{self.name}跑起来了&quot;)
+
+dog=Animal(name=&quot;小黑&quot;) # 实例化出 dog 对象
+</code></pre>
+<p>在实例化时传入的参数<code>name=&quot;小黑&quot;</code>传进入到构造函数<code>_init_</code>中，最终赋值<code>self.name</code>成为实例的属性。</p>
+<h2 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h2><p>实例化成对象后，如果访问实例属性，可以用<code>对象.属性名</code>访问。</p>
+<h3 id="访问实例属性"><a href="#访问实例属性" class="headerlink" title="访问实例属性"></a>访问实例属性</h3><pre><code class="访问实例属性">dog=Animal(name=&quot;小黑&quot;)
+dog.name  # 访问属性
+</code></pre>
+<pre><code class="输出">&#39;小黑&#39;
+</code></pre>
+<h3 id="调用方法-1"><a href="#调用方法-1" class="headerlink" title="调用方法"></a>调用方法</h3><p>1.通过<code>对象.方法名</code>：使用这种方法，在定义方法时self就代表对象（dog），调用时无需再传入。</p>
+<pre><code class="方法1">dog=Animal(name=&quot;小黑&quot;)
+dog.run()  # 调用方法
+</code></pre>
+<p>2.通过<code>类.方法名</code>：使用这种方法，self参数要传入实例对象。</p>
+<pre><code class="方法2">dog=Animal(name=&quot;小黑&quot;)
+Animal.run(dog)
+</code></pre>
 
         </div>
         <!-- .entry-content -->
@@ -298,36 +344,19 @@
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/post/7332.html" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                Hexo支线#01</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/post/40303.html" rel="next">
+            <a href="/2023/08/16/每日一题D2：两数之和-1/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                基于深度学习的三维人脸重建#01：介绍</h3>
+                每日一题D2：两数之和(1)</h3>
                 <hr>
               </div>
             </a>
@@ -390,7 +419,7 @@
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>病树历火，繁华寥落雏芽生。</p>
+        <p><i class="iconfont icon-write"></i>NUAA</p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->

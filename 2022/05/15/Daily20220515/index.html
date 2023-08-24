@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">每日一题D1：斐波那契数(509) | Sandy</title>
+  <title itemprop="name">Daily20220515 | Sandy</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -245,11 +245,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      每日一题D1：斐波那契数(509)</h1>
+      Daily20220515</h1>
       <p class="entry-census">
         <span>
           <a href="https://sdracula.github.io">
@@ -261,7 +261,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2023-8-13<span class="bull">
+        2022-5-15<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -275,51 +275,12 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="509-斐波那契数"><a href="#509-斐波那契数" class="headerlink" title="509 斐波那契数"></a>509 斐波那契数</h2><p>斐波那契数 （通常用 F(n) 表示）形成的序列称为 斐波那契数列 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：</p>
-<p>F(0) = 0，F(1) = 1<br>F(n) = F(n - 1) + F(n - 2)，其中 n &gt; 1</p>
-<p>给定n，请计算F(n)。</p>
-<h4 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h4><p>0 &lt;= n &lt;= 30</p>
-<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h3 id="滚动数组"><a href="#滚动数组" class="headerlink" title="滚动数组"></a>滚动数组</h3><pre><code>class Solution {
-public:
-    int fib(int n) {
-        if(n&lt;2){
-            return n;
-        }
-        int m = 0,b=1,l=1;
-        for(int i = 2;i&lt;n;i++){
-            m = b;
-            b = l;
-            l = m + b;
-        }
-        return l; 
-        } 
-    };
-</code></pre><pre><code>class Solution {
-public:
-    int fib(int n) {
-        if(n&lt;=1)return n;
+          <h1 id="崩溃"><a href="#崩溃" class="headerlink" title="崩溃"></a>崩溃</h1><p>好不容易改了模型，debug完，loss训练到0.2，结果测试一下直接无语了。</p>
+<h2 id="原图"><a href="#原图" class="headerlink" title="原图"></a>原图</h2><p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/jml.jpg" alt></p>
+<h2 id="原版PRNEt"><a href="#原版PRNEt" class="headerlink" title="原版PRNEt"></a>原版PRNEt</h2><p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/PRNETtest2.png" alt></p>
+<h2 id="自己修改后的PRNet"><a href="#自己修改后的PRNet" class="headerlink" title="自己修改后的PRNet"></a>自己修改后的PRNet</h2><p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/PRNETtest1.png" alt></p>
+<p>我愿称之为三维人脸破坏。</p>
 
-        int a[2]={0,1};
-
-        int sum = 0;
-        for(int i = 2;i &lt;= n; i++ ){
-            sum = a[1] + a[0];
-            a[0]=a[1];
-            a[1]=sum;
-        }
-
-        return a[1];
-    }
-};
-</code></pre><pre><code>class Solution {
-public:
-    int fib(int n) {
-        if(n==0) return 0;
-        if(n==1) return 1;
-        return fib(n-1)+fib(n-2);
-    }
-};
-</code></pre>
         </div>
         <!-- .entry-content -->
         <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
@@ -340,15 +301,15 @@ public:
           
             <div class="post-nepre half previous">
           
-            <a href="/post/21003.html" rel="prev">
+            <a href="/2023/03/29/Hexo支线-01/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                每日一题D2：两数之和(1)</h3>
+                Hexo支线#01</h3>
                 <hr>
               </div>
             </a>
@@ -358,15 +319,15 @@ public:
           
             <div class="post-nepre half next">
           
-            <a href="/post/11405.html" rel="next">
+            <a href="/2022/05/12/3DFaceRestruction01/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                一键将CSDN博客保存为PDF文件</h3>
+                基于深度学习的三维人脸重建#01：介绍</h3>
                 <hr>
               </div>
             </a>
@@ -429,7 +390,7 @@ public:
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i></p>
+        <p><i class="iconfont icon-write"></i>病树历火，繁华寥落雏芽生。</p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->

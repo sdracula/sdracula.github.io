@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Hexo建站#01：Hexo介绍 | Sandy</title>
+  <title itemprop="name">Pytorch#D01:数据操作 | Sandy</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -245,11 +245,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Hexo建站#01：Hexo介绍</h1>
+      Pytorch#D01:数据操作</h1>
       <p class="entry-census">
         <span>
           <a href="https://sdracula.github.io">
@@ -261,7 +261,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2022-4-29<span class="bull">
+        2023-4-2<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -275,28 +275,102 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>是一个快速、简洁且高效的博客框架，我们可以使用这一框架搭建自己的个人博客并将其托管到Github上。</p>
-<h2 id="Hexo特性"><a href="#Hexo特性" class="headerlink" title="Hexo特性"></a>Hexo特性</h2><ul>
-<li>超快速度：Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</li>
-<li>支持Markdown：Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。</li>
-<li>一键部署：只需一条指令即可部署到 GitHub Pages, Heroku 或其他平台。</li>
-<li>插件和可扩展性：强大的 API 带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成。</li>
-</ul>
-<h2 id="Hexo主题"><a href="#Hexo主题" class="headerlink" title="Hexo主题"></a>Hexo主题</h2><p>Hexo现在拥有362个不同的<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题</a></p>
-<p>人气较高的主题：</p>
-<ul>
-<li><a href="https://docs.hojun.cn/sakura/docs/#/" target="_blank" rel="noopener">Sakura</a>(也就是本站所使用的主题)</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/sakura.jpg" alt></p>
-<ul>
-<li><a href="https://theme-next.js.org/" target="_blank" rel="noopener">NexT</a> </li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/next.jpg" alt></p>
-<ul>
-<li><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/butterfly.jpg" alt></p>
-<h4 id="下一篇博客我们将一起进行Hexo的安装。"><a href="#下一篇博客我们将一起进行Hexo的安装。" class="headerlink" title="下一篇博客我们将一起进行Hexo的安装。"></a>下一篇博客我们将一起进行Hexo的安装。</h4>
+          <h1 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h1><p>深度学习存储和操作数据的主要接口是张量（𝑛维数组）。它提供了各种功能，包括基本数学运算、广播、索引、切片、内存节省和转换其他Python对象。</p>
+<h2 id="张量属性"><a href="#张量属性" class="headerlink" title="张量属性"></a>张量属性</h2><ol>
+<li>创建有序整数张量：arrange属性<pre><code>x = torch.arrange(12)
+x
+</code></pre><pre><code>tensor([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+</code></pre></li>
+<li>访问张量形状：shape属性<pre><code>x.shape
+</code></pre><pre><code>torch.Size([12])
+</code></pre></li>
+<li>访问张量元素总数（大小）：numel方法<pre><code>x.numel()
+</code></pre><pre><code>12
+</code></pre></li>
+<li>改变张量形状<pre><code>X = x.reshape(3,4)
+X
+</code></pre><pre><code>tensor([[ 0,  1,  2,  3],
+     [ 4,  5,  6,  7],
+     [ 8,  9, 10, 11]])
+</code></pre></li>
+<li>矩阵初始化<pre><code>torch.zeros((2, 3, 4))
+torch.ones((2, 3, 4))
+torch.randn(3, 4)
+torch.tensor([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
+</code></pre><h2 id="张量运算"><a href="#张量运算" class="headerlink" title="张量运算"></a>张量运算</h2></li>
+<li>按元素操作<pre><code>x = torch.tensor([1.0, 2, 4, 8])
+y = torch.tensor([2, 2, 2, 2])
+x + y, x - y, x * y, x / y, x ** y  # **运算符是求幂运算
+torch.exp(x)
+</code></pre></li>
+<li>多个张量连结<pre><code>X = torch.arange(12, dtype=torch.float32).reshape((3,4))
+Y = torch.tensor([[2.0, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
+torch.cat((X, Y), dim=0), torch.cat((X, Y), dim=1)
+</code></pre><pre><code>(tensor([[ 0.,  1.,  2.,  3.],
+      [ 4.,  5.,  6.,  7.],
+      [ 8.,  9., 10., 11.],
+      [ 2.,  1.,  4.,  3.],
+      [ 1.,  2.,  3.,  4.],
+      [ 4.,  3.,  2.,  1.]]),
+tensor([[ 0.,  1.,  2.,  3.,  2.,  1.,  4.,  3.],
+      [ 4.,  5.,  6.,  7.,  1.,  2.,  3.,  4.],
+      [ 8.,  9., 10., 11.,  4.,  3.,  2.,  1.]]))
+</code></pre></li>
+<li>逻辑运算<pre><code>X == Y
+</code></pre><pre><code>tensor([[False,  True, False,  True],
+     [False, False, False, False],
+     [False, False, False, False]])
+</code></pre>4.求和<pre><code>X.sum() #对张量中的所有元素进行求和，会产生一个单元素张量。
+</code></pre><pre><code>tensor(66.)
+</code></pre><h2 id="广播机制"><a href="#广播机制" class="headerlink" title="广播机制"></a>广播机制</h2>在两个张量形状不同的情况下，调用广播机制（broadcasting mechanism）执行按元素操作。<br>工作方式:<br>1.通过适当复制元素来扩展一个或两个数组，以便在转换之后，两个张量具有相同的形状；<br>2.对生成的数组执行按元素操作。<pre><code>a = torch.arange(3).reshape((3, 1))
+b = torch.arange(2).reshape((1, 2))
+a, b
+</code></pre><pre><code>(tensor([[0],
+      [1],
+      [2]]),
+tensor([[0, 1]]))
+</code></pre><pre><code>a + b
+</code></pre><pre><code>tensor([[0, 1],
+     [1, 2],
+     [2, 3]])
+</code></pre><h2 id="索引和切片"><a href="#索引和切片" class="headerlink" title="索引和切片"></a>索引和切片</h2>与Python数组相同，第一个元素的索引是0，最后一个元素的索引是-1。[m,n]包括了第m到n-1个元素<pre><code>X[-1], X[1:3]
+X[1, 2] = 9
+X
+X[0:2, :] = 12
+X
+</code></pre><pre><code>(tensor([ 8.,  9., 10., 11.]),
+tensor([[ 4.,  5.,  6.,  7.],
+      [ 8.,  9., 10., 11.]]))
+tensor([[ 0.,  1.,  2.,  3.],
+     [ 4.,  5.,  9.,  7.],
+     [ 8.,  9., 10., 11.]])
+tensor([[12., 12., 12., 12.],
+     [12., 12., 12., 12.],
+     [ 8.,  9., 10., 11.]])
+</code></pre><h2 id="节省内存"><a href="#节省内存" class="headerlink" title="节省内存"></a>节省内存</h2>运行一些操作可能为新结果分配内存。<br>例如Y = X + Y, Y会指向一个为X + Y分配的新地址。<pre><code>before = id(Y) #id()函数给我们提供了内存中引用对象的确切地址
+Y = Y + X
+id(Y) == before
+</code></pre><pre><code>False
+</code></pre>运行Y = Y + X后，我们会发现id(Y)指向另一个位置。 这是因为Python首先计算Y + X，为结果分配新的内存，然后使Y指向内存中的这个新位置。<br>这可能是不可取的，原因有两个：<br>1.我们不想总是不必要地分配内存。在机器学习中，我们可能有数百兆的参数，并且在一秒内多次更新所有参数。通常情况下，我们希望原地执行这些更新；<br>2.如果我们不原地更新，其他引用仍然会指向旧的内存位置，这样我们的某些代码可能会无意中引用旧的参数。<h3 id="原地操作"><a href="#原地操作" class="headerlink" title="原地操作"></a>原地操作</h3>1.我们可以使用切片表示法将操作的结果分配给先前分配的数组，例如Y[:] = <expression>。 我们首先创建一个新的矩阵Z，其形状与另一个Y相同， 使用zeros_like来分配一个全 0<br>的块。<pre><code>Z = torch.zeros_like(Y)
+print(&#39;id(Z):&#39;, id(Z))
+Z[:] = X + Y
+print(&#39;id(Z):&#39;, id(Z))
+</code></pre><pre><code>id(Z): 1925677330576
+id(Z): 1925677330576
+</code></pre>2.如果在后续计算中没有重复使用X， 我们也可以使用X[:] = X + Y或X += Y来减少操作的内存开销。<pre><code>before = id(X)
+X += Y
+id(X) == before
+</code></pre><pre><code>True
+</code></pre><h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2>1.torch张量和numpy张量(ndarray)互相转换。<pre><code>A = X.numpy()
+B = torch.tensor(A)
+type(A), type(B)
+</code></pre><pre><code>(numpy.ndarray, torch.Tensor)
+</code></pre>2.将大小为1的张量转换为Python标量<br>调用item函数或Python的内置函数。<pre><code>a = torch.tensor([3.5])
+a, a.item(), float(a), int(a)
+</code></pre><pre><code>(tensor([3.5000]), 3.5, 3.5, 3)
+</code></pre></expression></li>
+</ol>
+
         </div>
         <!-- .entry-content -->
         <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
@@ -315,22 +389,39 @@
       <section class="post-squares nextprev">
         
           
-            <div class="post-nepre full previous">
+            <div class="post-nepre half previous">
           
-            <a href="/post/40303.html" rel="prev">
+            <a href="/2023/07/13/一键将CSDN博客保存为PDF文件/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                基于深度学习的三维人脸重建#01：介绍</h3>
+                一键将CSDN博客保存为PDF文件</h3>
                 <hr>
               </div>
             </a>
           </div>
         
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2023/03/29/Hexo支线-01/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Hexo支线#01</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
         
       </section>
       
@@ -389,7 +480,7 @@
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>Sandy</p>
+        <p><i class="iconfont icon-write"></i>病树历火，繁华寥落雏芽生。</p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->

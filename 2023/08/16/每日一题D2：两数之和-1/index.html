@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">基于深度学习的三维人脸重建#01：介绍 | Sandy</title>
+  <title itemprop="name">每日一题D2：两数之和(1) | Sandy</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -245,11 +245,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      基于深度学习的三维人脸重建#01：介绍</h1>
+      每日一题D2：两数之和(1)</h1>
       <p class="entry-census">
         <span>
           <a href="https://sdracula.github.io">
@@ -261,7 +261,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2022-5-12<span class="bull">
+        2023-8-16<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -275,35 +275,21 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>人脸是人类最重要的身份特征之一。而相较于容易获取的二维人脸图片，三维人脸携带了更为完整的个人特征信息也就是人脸的三维空间数据。<br><img src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/emma_3d.jpg" alt></p>
-<h1 id="传统三维人脸重建"><a href="#传统三维人脸重建" class="headerlink" title="传统三维人脸重建"></a>传统三维人脸重建</h1><p>随着三维人脸重建技术的发展，三维人脸也逐渐走入我们的生活。我们平时可能都使用过支付宝的刷脸支付，我们在付款时只需要将人脸对准在识别区域内，就可以轻松付款。这一支付方式正是应用了基于三维结构光的三维人脸重建技术。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/pay.jpeg" alt></p>
-<p>不只是支付安保领域，三维人脸重建技术也经常出现在影视娱乐领域中。在番剧刀剑神域中，主角们在虚拟游戏世界中的形象与现实世界中的形象完全相同也正是因为头戴式设备的扫描功能。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/SWO.jpg" alt></p>
-<p>我们能看到像<a href="https://scilaboratory.com/res.html" target="_blank" rel="noopener">南京理工大学左超教授智能计算实验室团队</a>的基于SLAM的快速三维建模技术和三维人脸测量技术在精度和设备约束上做出了一定的突破。</p>
-<h1 id="现代三维人脸重建技术"><a href="#现代三维人脸重建技术" class="headerlink" title="现代三维人脸重建技术"></a>现代三维人脸重建技术</h1><p>那么为什么三维人脸重建技术并没有更进一步地应用并普及到我们的生活中？</p>
-<p>在我看来，传统的三维人脸重建技术受限于结构光学设备，且往往受到环境与姿态的约束，在成本和可及性上都存在着一定的障碍。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/chaozuo.jpg" alt></p>
-<p>但是三维人脸重建技术能否彻底摆脱设备限制，摆脱环境姿态等约束，仅仅根据一张普通的图片进行？</p>
-<p>对此，现代三维人脸重建技术作出了它的回答。现代三维人脸重建技术通过图像信息进行三维人脸重建，在一定程度上解决了这些问题。</p>
-<p>现代三维人脸重建技术可以分为基于模型驱动的三维人脸重建技术和基于数据驱动（即基于深度学习）的三维人脸重建技术。</p>
-<h2 id="基于模型驱动的三维人脸重建技术"><a href="#基于模型驱动的三维人脸重建技术" class="headerlink" title="基于模型驱动的三维人脸重建技术"></a>基于模型驱动的三维人脸重建技术</h2><p>1999 年，瑞士巴塞尔大学的科学家Blanz 和Vetter 提出了三维可形变模型（3DMM）。基于模型驱动的三维人脸重建技术以3DMM为核心，旨在将三维人脸数据低维化来建立一个平均人脸模型，并在其基础上拟合相关系数，从而重建三维人脸模型。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/3DMM.png" alt></p>
-<p>基于模型的三维人脸技术同时也受到数据集不易采集和空间信息损失较大的限制，在精度上表现得差强人意。</p>
-<h2 id="基于数据驱动（深度学习）的三维人脸重建技术"><a href="#基于数据驱动（深度学习）的三维人脸重建技术" class="headerlink" title="基于数据驱动（深度学习）的三维人脸重建技术"></a>基于数据驱动（深度学习）的三维人脸重建技术</h2><p>随着深度学习近些年来的突飞猛进，我们似乎有了处理复杂模型和大量三维空间数据的能力，基于深度学习的三维人脸重建技术应运而生。</p>
-<h3 id="采用全监督方法进行参数回归"><a href="#采用全监督方法进行参数回归" class="headerlink" title="采用全监督方法进行参数回归"></a>采用全监督方法进行参数回归</h3><p>最初基于深度学习的三维人脸重建技术的发展方向在于以何种方式将深度学习与三维人脸模型相结合才能够达到较好的重建效果。</p>
-<p>具有代表性的工作有Richardson等人在2017年提出的由CoarseNet和FineNet组成的CNN结构。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/coarsefine.png" alt></p>
-<p>全监督回归方法虽然能够回归模型参数，仍未能摆脱低维模型参数空间对于精度的限制，在细节重建效果上的表现差强人意。</p>
-<h3 id="采用自监督方法端到端地进行回归"><a href="#采用自监督方法端到端地进行回归" class="headerlink" title="采用自监督方法端到端地进行回归"></a>采用自监督方法端到端地进行回归</h3><p>针对以上问题，许多工作通过对人脸三维特征进行编码以更好地发挥神经网络的回归能力。</p>
-<p>VRNet（Volumetric Regression Network）通过体素回归的方式，摆脱模型的限制，在精度上取得了新的突破。但体素同时也是一把双刃剑，这是因为整个三维人脸的体素不仅包括了人脸表面顶点部分，还包括了人脸下的大量无用数据，导致计算量过大。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/VRNetPreview.png" alt></p>
-<p>不同的是，PRNet(Position map Regression Network)利用UV位置图(UV position map)来描述3D形状。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/UVMap.jpg" alt></p>
-<p>PRNet将三维人脸映射到UV位置图上并通过一个简单的编码器-解码器结构的网络预测UV位置图坐标。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/PNetwork.jpg" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/PRNEtout.png" alt></p>
-<h2 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h2><p>随着Unet、Transformer、Attention注意力机制的流行屠榜，我们能否将这些新生代优秀的模型机制应用到三维人脸重建领域当中，让过去几年里优秀的工作重获新生？</p>
+          <h2 id="001-两数之和"><a href="#001-两数之和" class="headerlink" title="001 两数之和"></a>001 两数之和</h2><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
+<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>字典O(1)</p>
+<pre><code>class Solution:
+    def twoSum(self,nums,target):
+        n = len(nums)
+        index = {}
+        for i in range(n):
+            v = target - nums[i]
+            idx =index.get(v)
+            if idx != None:
+                return [i,idx]
+            index[nums[i]] = i
+</code></pre><hr>
 
         </div>
         <!-- .entry-content -->
@@ -325,15 +311,15 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/post/6356.html" rel="prev">
+            <a href="/2023/08/24/Python类与继承/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Python.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Python.png">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                Daily20220515</h3>
+                Python 类的理解与使用</h3>
                 <hr>
               </div>
             </a>
@@ -343,15 +329,15 @@
           
             <div class="post-nepre half next">
           
-            <a href="/post/7654.html" rel="next">
+            <a href="/2023/08/13/每日一题D1：斐波那契数(509)/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                Hexo建站#01：Hexo介绍</h3>
+                每日一题D1：斐波那契数(509)</h3>
                 <hr>
               </div>
             </a>
@@ -414,7 +400,7 @@
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>病树历火，繁华寥落雏芽生。</p>
+        <p><i class="iconfont icon-write"></i></p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->

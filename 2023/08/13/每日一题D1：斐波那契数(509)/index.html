@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">一键将CSDN博客保存为PDF文件 | Sandy</title>
+  <title itemprop="name">每日一题D1：斐波那契数(509) | Sandy</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -245,11 +245,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      一键将CSDN博客保存为PDF文件</h1>
+      每日一题D1：斐波那契数(509)</h1>
       <p class="entry-census">
         <span>
           <a href="https://sdracula.github.io">
@@ -261,7 +261,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2023-7-13<span class="bull">
+        2023-8-13<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -275,38 +275,51 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <pre><code class="console">$(function(){
-    /*从被选元素body移除一个类页面样式*/
-    $(&quot;body&quot;).removeClass(&quot;nodata&quot;);
-    /*删除顶部导航*/
-    $(&quot;#csdn-toolbar&quot;).remove();
-    /*删除左侧导航*/
-    $(&quot;aside&quot;).remove();
-    /*删除右侧悬浮*/
-    $(&quot;.csdn-side-toolbar&quot;).remove();
-    /*删除CSDN文章上方*/
-    $(&quot;.article-header-box .article-info-box&quot;).remove();
-    $(&quot;#blogColumnPayAdvert&quot;).remove();
-    /*展开CSDN文章中被隐藏的代码段：从被选元素&lt;pre class=&quot;set-code-hide&quot;移除一个类页面样式*/
-    $(&#39;pre[class=&quot;set-code-hide prettyprint&quot;]&#39;).removeClass(&quot;set-code-hide&quot;);
-    /*删除CSDN文章中被隐藏的代码段上面的遮罩*/
-    $(&quot;.hide-preCode-box&quot;).remove();
-    /*删除CSDN文章下方*/
-    $(&quot;.more-toolbox-new&quot;).remove();
-    $(&quot;.reward-box-new&quot;).remove();
-    $(&quot;.recommend-tit-mod&quot;).remove();
-    $(&quot;.blog-footer-bottom&quot;).remove();
-    /*删除CSDN文章下方评论、其他博客链接*/
-    $(&quot;.comment-box, .recommend-box, #csdn-shop-window, .template-box&quot;).remove();
-    /*删除CSDN文章下方公众号链接、笑脸评级*/
-    $(&quot;#blogExtensionBox, #recommendNps&quot;).remove();
-    /*修改CSDN文章css样式为》默认样式&#39;display&#39;:&#39;contents&#39;或自定义宽度&#39;width&#39;:&#39;1100px&#39;或自定义宽度&#39;width&#39;:&#39;825px&#39;*/
-    $(&quot;main&quot;).css({&#39;width&#39;:&#39;1100px&#39;}); 
-    /*弹出打印窗口》另存为PDF文件*/
-    window.print();
-});
-</code></pre>
+          <h2 id="509-斐波那契数"><a href="#509-斐波那契数" class="headerlink" title="509 斐波那契数"></a>509 斐波那契数</h2><p>斐波那契数 （通常用 F(n) 表示）形成的序列称为 斐波那契数列 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：</p>
+<p>F(0) = 0，F(1) = 1<br>F(n) = F(n - 1) + F(n - 2)，其中 n &gt; 1</p>
+<p>给定n，请计算F(n)。</p>
+<h4 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h4><p>0 &lt;= n &lt;= 30</p>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h3 id="滚动数组"><a href="#滚动数组" class="headerlink" title="滚动数组"></a>滚动数组</h3><pre><code>class Solution {
+public:
+    int fib(int n) {
+        if(n&lt;2){
+            return n;
+        }
+        int m = 0,b=1,l=1;
+        for(int i = 2;i&lt;n;i++){
+            m = b;
+            b = l;
+            l = m + b;
+        }
+        return l; 
+        } 
+    };
+</code></pre><pre><code>class Solution {
+public:
+    int fib(int n) {
+        if(n&lt;=1)return n;
 
+        int a[2]={0,1};
+
+        int sum = 0;
+        for(int i = 2;i &lt;= n; i++ ){
+            sum = a[1] + a[0];
+            a[0]=a[1];
+            a[1]=sum;
+        }
+
+        return a[1];
+    }
+};
+</code></pre><pre><code>class Solution {
+public:
+    int fib(int n) {
+        if(n==0) return 0;
+        if(n==1) return 1;
+        return fib(n-1)+fib(n-2);
+    }
+};
+</code></pre>
         </div>
         <!-- .entry-content -->
         <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
@@ -327,7 +340,7 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/post/13397.html" rel="prev">
+            <a href="/2023/08/16/每日一题D2：两数之和-1/" rel="prev">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
               </div>
@@ -335,7 +348,7 @@
               Previous Post</span>
               <div class="info">
                 <h3>
-                每日一题D1：斐波那契数(509)</h3>
+                每日一题D2：两数之和(1)</h3>
                 <hr>
               </div>
             </a>
@@ -345,15 +358,15 @@
           
             <div class="post-nepre half next">
           
-            <a href="/post/10728.html" rel="next">
+            <a href="/2023/07/13/一键将CSDN博客保存为PDF文件/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                Pytorch#D01:数据操作</h3>
+                一键将CSDN博客保存为PDF文件</h3>
                 <hr>
               </div>
             </a>
@@ -416,7 +429,7 @@
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>NUAA</p>
+        <p><i class="iconfont icon-write"></i></p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->

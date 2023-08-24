@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Hexo支线#01 | Sandy</title>
+  <title itemprop="name">Hexo建站#01：Hexo介绍 | Sandy</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -249,7 +249,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Hexo支线#01</h1>
+      Hexo建站#01：Hexo介绍</h1>
       <p class="entry-census">
         <span>
           <a href="https://sdracula.github.io">
@@ -261,7 +261,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2023-3-29<span class="bull">
+        2022-4-29<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -275,46 +275,28 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>时隔一年，终于又有时间更新博客了，好耶！之前的电脑进水了，不过还好文件都有备份，所以是在新电脑上重新配置。</p>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>建议安装低于14的版本，否则可能会出现与Hexo不兼容的情况，导致页面空白。</p>
-<pre><code class="bash">conda install -c conda-forge/label/cf202003 nodejs
-</code></pre>
-<h2 id="Hexo安装、初始化与预览"><a href="#Hexo安装、初始化与预览" class="headerlink" title="Hexo安装、初始化与预览"></a>Hexo安装、初始化与预览</h2><p>1.使用Npm安装Hexo</p>
-<pre><code class="bash">install -g hexo-cli
-</code></pre>
-<p>2.Hexo初始化</p>
-<pre><code class="bash">hexo init
-</code></pre>
-<p>3.安装依赖</p>
-<pre><code class="bash">npm install
-</code></pre>
-<p>4.本地预览</p>
-<pre><code class="bash">hexo g #生成页面：将Markdown文件转换成Html文件。
-hexo s #启动服务：启动本地服务器进行预览。
-</code></pre>
-<p>5.访问地址：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>出现Hexo的Hello World页面即成功。</p>
-<h2 id="部署Hexo到Github-Pages托管"><a href="#部署Hexo到Github-Pages托管" class="headerlink" title="部署Hexo到Github Pages托管"></a>部署Hexo到Github Pages托管</h2><p>1.安装Hexo-deployer-git:</p>
-<pre><code class="cmd">npm install hexo-deployer-git --save
-</code></pre>
-<p>2.连接Github<br>注册Github账户，并在本地安装Git。<br>在命令行中设置用户名和邮箱：</p>
-<pre><code class="cmd">git config --global user.name &quot;Your GitHub Username&quot;
-git config --global user.email &quot;Your GitHub Email address&quot;
-</code></pre>
-<p>创建SSH密钥：</p>
-<pre><code class="cmd">ssh-keygen -t rsa -C &quot;Your GitHub Email address&quot;
-</code></pre>
-<p>在C:\Users\用户名.ssh中用记事本打开隐藏的id_rsa.pub文件并复制其中内容。<br>在Github的Settings页面中选择SSH and GPG keys，并点击New SSH Key，Title可任意输入，在Key中输入复制的内容，然后点击Add SSh key。</p>
-<p>3.按修改_config.yml文件末尾Deployment配置，按如下操作：</p>
-<pre><code class="_config.yml">deploy:
-  type: git
-  # repository: git@github.com:用户名/用户名.github.io.git # SSH连接
-  # repository: https://github.com/sdracula/sdracula.github.io.git # https连接
-  branch: main
-</code></pre>
-<p>4.上传文件至Github</p>
-<pre><code class="cmd">hexo d
-</code></pre>
-
+          <h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>是一个快速、简洁且高效的博客框架，我们可以使用这一框架搭建自己的个人博客并将其托管到Github上。</p>
+<h2 id="Hexo特性"><a href="#Hexo特性" class="headerlink" title="Hexo特性"></a>Hexo特性</h2><ul>
+<li>超快速度：Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</li>
+<li>支持Markdown：Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。</li>
+<li>一键部署：只需一条指令即可部署到 GitHub Pages, Heroku 或其他平台。</li>
+<li>插件和可扩展性：强大的 API 带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成。</li>
+</ul>
+<h2 id="Hexo主题"><a href="#Hexo主题" class="headerlink" title="Hexo主题"></a>Hexo主题</h2><p>Hexo现在拥有362个不同的<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题</a></p>
+<p>人气较高的主题：</p>
+<ul>
+<li><a href="https://docs.hojun.cn/sakura/docs/#/" target="_blank" rel="noopener">Sakura</a>(也就是本站所使用的主题)</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/sakura.jpg" alt></p>
+<ul>
+<li><a href="https://theme-next.js.org/" target="_blank" rel="noopener">NexT</a> </li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/next.jpg" alt></p>
+<ul>
+<li><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/butterfly.jpg" alt></p>
+<h4 id="下一篇博客我们将一起进行Hexo的安装。"><a href="#下一篇博客我们将一起进行Hexo的安装。" class="headerlink" title="下一篇博客我们将一起进行Hexo的安装。"></a>下一篇博客我们将一起进行Hexo的安装。</h4>
         </div>
         <!-- .entry-content -->
         <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
@@ -333,39 +315,22 @@ git config --global user.email &quot;Your GitHub Email address&quot;
       <section class="post-squares nextprev">
         
           
-            <div class="post-nepre half previous">
+            <div class="post-nepre full previous">
           
-            <a href="/post/10728.html" rel="prev">
+            <a href="/2022/05/12/3DFaceRestruction01/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                Pytorch#D01:数据操作</h3>
+                基于深度学习的三维人脸重建#01：介绍</h3>
                 <hr>
               </div>
             </a>
           </div>
         
-        
-          
-            <div class="post-nepre half next">
-          
-            <a href="/post/6356.html" rel="next">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
-              </div>
-              <span class="label">
-              Next Post</span>
-              <div class="info">
-                <h3>
-                Daily20220515</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
         
       </section>
       
@@ -424,7 +389,7 @@ git config --global user.email &quot;Your GitHub Email address&quot;
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>病树历火，繁华寥落雏芽生。</p>
+        <p><i class="iconfont icon-write"></i>Sandy</p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->
