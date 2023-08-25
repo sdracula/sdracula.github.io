@@ -2,6 +2,8 @@
 <html lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
+  <!-- cungudafa百度收录验证编号 -->
+  <!-- <meta name="baidu-site-verification" content="LukfTcyXmC" /> -->
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
   <title itemprop="name">Sandy</title>
@@ -9,95 +11,147 @@
     <link rel="shortcut icon" href="/images/favicon.ico">
   
   <meta http-equiv="x-dns-prefetch-control" content="on">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
-  <link rel="stylesheet" href="/css/lib.min.css" media="all">
-  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/style.css" type="text/css" media="all" id="saukra_css-css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/jquery.fancybox.min.css" media="all">  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/font.css" media="all">
   <link rel="stylesheet" href="/css/insight.css" media="all">
-  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
-  <link rel="stylesheet" href="/css/zoom.css" media="all">
-  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
-" type="text/css" media="all"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/tags.css" media="all">
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/logo.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/fonts/LOGO/logo.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+
+  <!-- 分析 -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  <!-- Baidu Analytics -->
+
+  
+  <!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+  " type="text/css" media="all"> -->
   <script>
-  /*Initial Variables*/
-  var mashiro_option = new Object();
-  var mashiro_global = new Object();
-  mashiro_option.NProgressON = true;
-  /* 
-   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
-   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
-   */
-  mashiro_option.email_domain = "";
-  mashiro_option.email_name = "";
-  mashiro_option.cookie_version_control = "";
-  mashiro_option.qzone_autocomplete = false;
-  mashiro_option.site_name = "NUAASandy";
-  mashiro_option.author_name = "Sandy";
-  mashiro_option.site_url = "https://sdracula.github.io/";
-  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
-  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
-  mashiro_option.mathjax = "0";
-  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
-  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+    /*Initial Variables*/
+    var mashiro_option = new Object();
+    var mashiro_global = new Object();
+    mashiro_option.NProgressON = true;
+    /* 
+    * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+    * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+    */
+    mashiro_option.email_domain = "";
+    mashiro_option.email_name = "";
+    mashiro_option.cookie_version_control = "";
+    mashiro_option.qzone_autocomplete = false;
+    mashiro_option.site_name = "cungudafa姑";
+    mashiro_option.author_name = "姑";
+    mashiro_option.site_url = "https://cungudafa.top/";
+    mashiro_option.v_appId = "";//
+    mashiro_option.v_appKey = "";//
+    mashiro_option.mathjax = "1";
+    mashiro_option.copyright_enable = "false" ;
+    mashiro_option.copyright_minCharNumber = parseInt("120") ;
+    mashiro_option.copyright_description = "本文章著作权归作者所有，任何形式的转载都请注明出处。" ;
+    mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+    mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
 
-  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
-  // mashiro_option.float_player_on = true;
+    // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+    // mashiro_option.float_player_on = true;
 
-  /*End of Initial Variables*/
+    /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://api.dujin.org/bing/1920.php".split(",");
-  var bgindex = Math.floor(Math.random()*bg.length);
-  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
-    alert('朋友，IE浏览器未适配哦~');
-  }
+    var bg = "https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.0.9/img/cover/(0).jpg.webp,https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.0.9/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.0.9/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.0.9/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.0.9/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.0.9/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.0.9/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.0.9/img/cover/(7).jpg.webp".split(",");
+    var bgindex = Math.floor(Math.random()*bg.length);
+    if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+      alert('朋友，IE浏览器未适配哦~');
+    }
   </script>
-  <style type="text/css">
-  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
-  </style>
-  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
-  </style>
-</head>
+</head> 
 </html>
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- Dynamic sliders -->
   <div class="scrollbar" id="bar">
   </div>
   <a href="#" class="cd-top faa-float animated"></a>
+  <!-- Main content -->
   <section id="main-container">
+    <!-- Top menu -->
     <div class="headertop filter-dot">
   <div id="banner_wave_1"></div>
   <div id="banner_wave_2"></div>
   <figure id="centerbg" class="centerbg">
     <div class="focusinfo no-select">
       <div class="header-tou">
-<!--        <a href="https://sdracula.github.io/">
-          <img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/joker.jpg">
-        </a>-->
-        <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="CV DREAM">CV DREAM</h1>
-<!-- <a href="https://sdracula.github.io/">
-   <img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/joker.jpg">
-</a> -->
-
+        <a href="https://cungudafa.top/">
+          <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg">
+        </a>
       </div>
       <div class="header-info">
-        <p>公无渡河，公竟渡河。</p>
+        <p>莫三天打鱼两天晒网</p>
         <div class="top-social_v2">
           <li id="bg-pre">
             <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
           </li>
-          <!--
+          
             
               
                 <li>
-                  <a href="http://github.com/sdracula" target="_blank" class="social-github" title="github">
-                    <img src="/img/social/github.png">
+                  <a href="https://gitee.com/cungudafa" target="_blank" class="social-github" title="gitee">
+                    <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/social/gitee.png">
                   </a>
                 </li>
               
             
-          -->
+              
+                <li>
+                  <a href="http://github.com/cungudafa" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://blog.csdn.net/cungudafa" target="_blank" class="social-github" title="csdn">
+                    <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/social/csdn.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.zhihu.com/people/cungudafa" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://space.bilibili.com/430247358" target="_blank" class="social-github" title="bilibili">
+                    <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/social/bilibili.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.png">
+                  </div>
+                </li>
+              
+            
+          
           <li id="bg-next">
             <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
           </li>
@@ -105,7 +159,8 @@
       </div>
     </div>
   </figure>
-  <div id="video-container" style="">
+  
+  <div id="video-container">
     <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
     </video>
     <div id="video-btn" class="loadvideo videolive">
@@ -123,17 +178,24 @@
   </div>
 </div>
     <div id="page" class="site wrapper">
+      <!-- banner -->
       <header class="site-header no-select gizle sabit" role="banner">
   <div class="site-top">
     <div class="site-branding">
-      <span class="site-title">
-        <span class="logolink moe-mashiro">
-          <a href="/">
-            <span class="sakurasono">NUAA</span>
-            <span class="shironeko">Sandy</span>
-          </a>
-        </span>
-      </span>
+        <span class="site-title">
+            <span class="logolink logo">
+                <a href="/">
+                    <ruby>
+                    <span class="sakuraso">姑</span>
+                    <span class="no">の</span>
+                    <span class="shironeko">小屋</span>
+                    <rp></rp>
+                    <rt class="logo">cungudafa</rt>
+                    <rp></rp>
+                    </ruby>
+                  </a>
+            </span>
+          </span>
     </div>
     <div class="searchbox search-form-submit">
       <i class="iconfont js-toggle-search iconsearch icon-search">
@@ -173,6 +235,20 @@
                   <ul class="sub-menu">
                     
                       <li>
+                        <a href="/analytics/">
+                          <i class="fa fa-line-chart" aria-hidden="true"></i>
+                          统计
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags">
+                          <i class="fa fa-tags" aria-hidden="true"></i>
+                          标签
+                        </a>
+                      </li>
+                    
+                      <li>
                         <a href="/categories/技术/">
                           <i class="fa fa-code" aria-hidden="true"></i>
                           技术
@@ -181,22 +257,8 @@
                     
                       <li>
                         <a href="/categories/生活/">
-                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                          生活
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/科研/">
                           <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                          科研
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/读书/">
-                          <i class="fa fa-book" aria-hidden="true"></i>
-                          读书
+                          生活
                         </a>
                       </li>
                     
@@ -215,20 +277,102 @@
                   <ul class="sub-menu">
                     
                       <li>
-                        <a href="/bangumi/">
-                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
-                          番组
+                        <a href="/artitalk/">
+                          <i class="fa fa-commenting-o fa-commenting" aria-hidden="true"></i>
+                          说说
                         </a>
                       </li>
                     
                       <li>
-                        <a href="/music/">
-                          <i class="fa fa-headphones" aria-hidden="true"></i>
-                          歌单
+                        <a href="/photos/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          相册
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/books/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          悦读
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/movies/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          追剧
                         </a>
                       </li>
                     
                   </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
                 
               </li>
             
@@ -239,186 +383,72 @@
   </div>
 </header>
 
+      
+      <!-- body -->
       <div class="blank" style="padding-top: 0px;"></div>
 <div id="content" class="site-content">
   
   <div class="notice" style="margin-top:60px">
-    <div id="calendar">
-      
-        <div class="container archive-calendar">
-    <div class="card">
-        <div id="post-calendar" class="card-content"></div>
-    </div>
-</div>
-<style type="text/css">
-    #post-calendar {
-        width: 100%;
-        height: 225px;
-        margin-top: 20px;
-        border-radius: 12px;
-        background-color: rgb(255, 255, 255,0.5);
-    }
-</style>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/echarts.min.js
-"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
-
-    
-
-    let option = {
-        title: {
-            top: 0,
-            text: '文章日历',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
-            }
-        },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2022-08-25", "2023-08-25"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                width: '1.88679%',
-                height: '15px',
-                color: '#EEEEEE',
-                borderColor: '#FFF',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontWeight: 'lighter',
-                fontSize: 12
-            },
-            dayLabel: {
-                show: true,
-                formatter: '{start}  1st',
-                fontWeight: 'lighter',
-                nameMap: ['日',' ','二',' ','四',' ','六',],
-                fontSize: 12
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2022-08-25", 0], ["2022-08-26", 0], ["2022-08-27", 0], ["2022-08-28", 0], ["2022-08-29", 0], ["2022-08-30", 0], ["2022-08-31", 0], ["2022-09-01", 0], ["2022-09-02", 0], ["2022-09-03", 0], ["2022-09-04", 0], ["2022-09-05", 0], ["2022-09-06", 0], ["2022-09-07", 0], ["2022-09-08", 0], ["2022-09-09", 0], ["2022-09-10", 0], ["2022-09-11", 0], ["2022-09-12", 0], ["2022-09-13", 0], ["2022-09-14", 0], ["2022-09-15", 0], ["2022-09-16", 0], ["2022-09-17", 0], ["2022-09-18", 0], ["2022-09-19", 0], ["2022-09-20", 0], ["2022-09-21", 0], ["2022-09-22", 0], ["2022-09-23", 0], ["2022-09-24", 0], ["2022-09-25", 0], ["2022-09-26", 0], ["2022-09-27", 0], ["2022-09-28", 0], ["2022-09-29", 0], ["2022-09-30", 0], ["2022-10-01", 0], ["2022-10-02", 0], ["2022-10-03", 0], ["2022-10-04", 0], ["2022-10-05", 0], ["2022-10-06", 0], ["2022-10-07", 0], ["2022-10-08", 0], ["2022-10-09", 0], ["2022-10-10", 0], ["2022-10-11", 0], ["2022-10-12", 0], ["2022-10-13", 0], ["2022-10-14", 0], ["2022-10-15", 0], ["2022-10-16", 0], ["2022-10-17", 0], ["2022-10-18", 0], ["2022-10-19", 0], ["2022-10-20", 0], ["2022-10-21", 0], ["2022-10-22", 0], ["2022-10-23", 0], ["2022-10-24", 0], ["2022-10-25", 0], ["2022-10-26", 0], ["2022-10-27", 0], ["2022-10-28", 0], ["2022-10-29", 0], ["2022-10-30", 0], ["2022-10-31", 0], ["2022-11-01", 0], ["2022-11-02", 0], ["2022-11-03", 0], ["2022-11-04", 0], ["2022-11-05", 0], ["2022-11-06", 0], ["2022-11-07", 0], ["2022-11-08", 0], ["2022-11-09", 0], ["2022-11-10", 0], ["2022-11-11", 0], ["2022-11-12", 0], ["2022-11-13", 0], ["2022-11-14", 0], ["2022-11-15", 0], ["2022-11-16", 0], ["2022-11-17", 0], ["2022-11-18", 0], ["2022-11-19", 0], ["2022-11-20", 0], ["2022-11-21", 0], ["2022-11-22", 0], ["2022-11-23", 0], ["2022-11-24", 0], ["2022-11-25", 0], ["2022-11-26", 0], ["2022-11-27", 0], ["2022-11-28", 0], ["2022-11-29", 0], ["2022-11-30", 0], ["2022-12-01", 0], ["2022-12-02", 0], ["2022-12-03", 0], ["2022-12-04", 0], ["2022-12-05", 0], ["2022-12-06", 0], ["2022-12-07", 0], ["2022-12-08", 0], ["2022-12-09", 0], ["2022-12-10", 0], ["2022-12-11", 0], ["2022-12-12", 0], ["2022-12-13", 0], ["2022-12-14", 0], ["2022-12-15", 0], ["2022-12-16", 0], ["2022-12-17", 0], ["2022-12-18", 0], ["2022-12-19", 0], ["2022-12-20", 0], ["2022-12-21", 0], ["2022-12-22", 0], ["2022-12-23", 0], ["2022-12-24", 0], ["2022-12-25", 0], ["2022-12-26", 0], ["2022-12-27", 0], ["2022-12-28", 0], ["2022-12-29", 0], ["2022-12-30", 0], ["2022-12-31", 0], ["2023-01-01", 0], ["2023-01-02", 0], ["2023-01-03", 0], ["2023-01-04", 0], ["2023-01-05", 0], ["2023-01-06", 0], ["2023-01-07", 0], ["2023-01-08", 0], ["2023-01-09", 0], ["2023-01-10", 0], ["2023-01-11", 0], ["2023-01-12", 0], ["2023-01-13", 0], ["2023-01-14", 0], ["2023-01-15", 0], ["2023-01-16", 0], ["2023-01-17", 0], ["2023-01-18", 0], ["2023-01-19", 0], ["2023-01-20", 0], ["2023-01-21", 0], ["2023-01-22", 0], ["2023-01-23", 0], ["2023-01-24", 0], ["2023-01-25", 0], ["2023-01-26", 0], ["2023-01-27", 0], ["2023-01-28", 0], ["2023-01-29", 0], ["2023-01-30", 0], ["2023-01-31", 0], ["2023-02-01", 0], ["2023-02-02", 0], ["2023-02-03", 0], ["2023-02-04", 0], ["2023-02-05", 0], ["2023-02-06", 0], ["2023-02-07", 0], ["2023-02-08", 0], ["2023-02-09", 0], ["2023-02-10", 0], ["2023-02-11", 0], ["2023-02-12", 0], ["2023-02-13", 0], ["2023-02-14", 0], ["2023-02-15", 0], ["2023-02-16", 0], ["2023-02-17", 0], ["2023-02-18", 0], ["2023-02-19", 0], ["2023-02-20", 0], ["2023-02-21", 0], ["2023-02-22", 0], ["2023-02-23", 0], ["2023-02-24", 0], ["2023-02-25", 0], ["2023-02-26", 0], ["2023-02-27", 0], ["2023-02-28", 0], ["2023-03-01", 0], ["2023-03-02", 0], ["2023-03-03", 0], ["2023-03-04", 0], ["2023-03-05", 0], ["2023-03-06", 0], ["2023-03-07", 0], ["2023-03-08", 0], ["2023-03-09", 0], ["2023-03-10", 0], ["2023-03-11", 0], ["2023-03-12", 0], ["2023-03-13", 0], ["2023-03-14", 0], ["2023-03-15", 0], ["2023-03-16", 0], ["2023-03-17", 0], ["2023-03-18", 0], ["2023-03-19", 0], ["2023-03-20", 0], ["2023-03-21", 0], ["2023-03-22", 0], ["2023-03-23", 0], ["2023-03-24", 0], ["2023-03-25", 0], ["2023-03-26", 0], ["2023-03-27", 0], ["2023-03-28", 0], ["2023-03-29", 1], ["2023-03-30", 0], ["2023-03-31", 0], ["2023-04-01", 0], ["2023-04-02", 1], ["2023-04-03", 0], ["2023-04-04", 0], ["2023-04-05", 0], ["2023-04-06", 0], ["2023-04-07", 0], ["2023-04-08", 0], ["2023-04-09", 0], ["2023-04-10", 0], ["2023-04-11", 0], ["2023-04-12", 0], ["2023-04-13", 0], ["2023-04-14", 0], ["2023-04-15", 0], ["2023-04-16", 0], ["2023-04-17", 0], ["2023-04-18", 0], ["2023-04-19", 0], ["2023-04-20", 0], ["2023-04-21", 0], ["2023-04-22", 0], ["2023-04-23", 0], ["2023-04-24", 0], ["2023-04-25", 0], ["2023-04-26", 0], ["2023-04-27", 0], ["2023-04-28", 0], ["2023-04-29", 0], ["2023-04-30", 0], ["2023-05-01", 0], ["2023-05-02", 0], ["2023-05-03", 0], ["2023-05-04", 0], ["2023-05-05", 0], ["2023-05-06", 0], ["2023-05-07", 0], ["2023-05-08", 0], ["2023-05-09", 0], ["2023-05-10", 0], ["2023-05-11", 0], ["2023-05-12", 0], ["2023-05-13", 0], ["2023-05-14", 0], ["2023-05-15", 0], ["2023-05-16", 0], ["2023-05-17", 0], ["2023-05-18", 0], ["2023-05-19", 0], ["2023-05-20", 0], ["2023-05-21", 0], ["2023-05-22", 0], ["2023-05-23", 0], ["2023-05-24", 0], ["2023-05-25", 0], ["2023-05-26", 0], ["2023-05-27", 0], ["2023-05-28", 0], ["2023-05-29", 0], ["2023-05-30", 0], ["2023-05-31", 0], ["2023-06-01", 0], ["2023-06-02", 0], ["2023-06-03", 0], ["2023-06-04", 0], ["2023-06-05", 0], ["2023-06-06", 0], ["2023-06-07", 0], ["2023-06-08", 0], ["2023-06-09", 0], ["2023-06-10", 0], ["2023-06-11", 0], ["2023-06-12", 0], ["2023-06-13", 0], ["2023-06-14", 0], ["2023-06-15", 0], ["2023-06-16", 0], ["2023-06-17", 0], ["2023-06-18", 0], ["2023-06-19", 0], ["2023-06-20", 0], ["2023-06-21", 0], ["2023-06-22", 0], ["2023-06-23", 0], ["2023-06-24", 0], ["2023-06-25", 0], ["2023-06-26", 0], ["2023-06-27", 0], ["2023-06-28", 0], ["2023-06-29", 0], ["2023-06-30", 0], ["2023-07-01", 0], ["2023-07-02", 0], ["2023-07-03", 0], ["2023-07-04", 0], ["2023-07-05", 0], ["2023-07-06", 0], ["2023-07-07", 0], ["2023-07-08", 0], ["2023-07-09", 0], ["2023-07-10", 0], ["2023-07-11", 0], ["2023-07-12", 0], ["2023-07-13", 1], ["2023-07-14", 0], ["2023-07-15", 0], ["2023-07-16", 0], ["2023-07-17", 0], ["2023-07-18", 0], ["2023-07-19", 0], ["2023-07-20", 0], ["2023-07-21", 0], ["2023-07-22", 0], ["2023-07-23", 0], ["2023-07-24", 0], ["2023-07-25", 0], ["2023-07-26", 0], ["2023-07-27", 0], ["2023-07-28", 0], ["2023-07-29", 0], ["2023-07-30", 0], ["2023-07-31", 0], ["2023-08-01", 0], ["2023-08-02", 0], ["2023-08-03", 0], ["2023-08-04", 0], ["2023-08-05", 0], ["2023-08-06", 0], ["2023-08-07", 0], ["2023-08-08", 0], ["2023-08-09", 0], ["2023-08-10", 0], ["2023-08-11", 0], ["2023-08-12", 0], ["2023-08-13", 1], ["2023-08-14", 0], ["2023-08-15", 0], ["2023-08-16", 1], ["2023-08-17", 0], ["2023-08-18", 0], ["2023-08-19", 0], ["2023-08-20", 0], ["2023-08-21", 0], ["2023-08-22", 0], ["2023-08-23", 0], ["2023-08-24", 1], ["2023-08-25", 0]]
-        }]
-
-    };
-
-    myChart.setOption(option);
-</script>
-      
-    </div>
-    <!-- <span id="hitokoto" style="margin-left:5px;"> :D 获取中...</span>
-      <p align="right" id="afrom"></p>
-      <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-      <script>
-        fetch('https://v1.hitokoto.cn/?c=h')
-          .then(function (res){
-            return res.json();
-          })
-          .then(function (data) {
-            var hitokoto = document.getElementById('hitokoto');
-            var afrom = document.getElementById('afrom');
-            hitokoto.innerText = data.hitokoto;
-            afrom.innerText =  '——【' + data.from + ' ' + data.from_who + '】';
-          })
-          .catch(function (err) {
-            console.error(err);
-          })
-      </script> -->
-
-<!-- 
-  <i class="iconfont icon-notification">
+    <audio id="mymusic" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn@latest/music/lovingstrangers.mp3" loop="loop"></audio>
+    <i class="iconfont icon-notification" onClick="play()">
     </i>
-       <div class="notice-content">Sandy</div>
-  </div>-->
+    <div class="notice-content">此处可爱贩卖机 24小时正常营业</div>
+    <script>
+      function play() {
+        var audio = document.getElementById('mymusic');
+        if (audio.paused) {
+            audio.play();
+        }else{
+            audio.pause();
+            audio.currentTime = 0;//音乐从头播放
+        }
+      }
+    </script>
+  </div>
   
   <div class="top-feature-row">
   <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
   <i class="fa fa-anchor" aria-hidden="true">
   </i>
-  My Life</h1>
+  兴趣</h1>
   
   <div class="top-feature-v2">
-    
-
     <div class="the-feature square from_left_and_right">
-      <a href="https://412.group/#/main" target="_blank">
+      <a href="https://gitee.com/cungudafa/hexo-theme-sakuraplus" target="_blank">
         <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/LAB412.jpg">
+          <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/startdash/sakura.md.png">
         </div>
         <div class="info">
-          <h3>Lab</h3>
-          <p>Laboratory</p>
+          <h3>SakuraPlus</h3>
+          <p>本站 hexo 主题</p>
         </div>
       </a>
     </div>
   </div>
   
   <div class="top-feature-v2">
-    
-
     <div class="the-feature square from_left_and_right">
-      <a href="http://space.bilibili.com/24152523" target="_blank">
+      <a href="https://v.youku.com/v_show/id_XMjg5MzUyMDY3Ng==.html?refer=seo_operation.liuxiao.liux_00003303_3000_Qzu6ve_19042900" target="_blank">
         <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Bilibili.png">
+          <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/startdash/beautyinside.jpg">
         </div>
         <div class="info">
-          <h3>bb空间</h3>
-          <p>Bilibili</p>
+          <h3>Youku</h3>
+          <p>内在美电影</p>
         </div>
       </a>
     </div>
   </div>
   
   <div class="top-feature-v2">
-    
-
     <div class="the-feature square from_left_and_right">
-      <a href="http://github.com/sdracula" target="_blank">
+      <a href="https://blog.csdn.net/cungudafa" target="_blank">
         <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/OIP-C1.jpg">
+          <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/HanHyoJoo.gif">
         </div>
         <div class="info">
-          <h3>Github</h3>
-          <p>Coding</p>
+          <h3>csdn</h3>
+          <p>技术栈</p>
         </div>
       </a>
     </div>
@@ -429,27 +459,51 @@
     <main id="main" class="site-main" role="main">
       <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
       <i class="fa fa-envira" aria-hidden="true"></i>
-      Discovery</h1>
+      发现</h1>
       
-  <!-- 首页默认取最最新文章集 -->
   
     
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+    
+      
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
   <div class="post-thumb">
     <a href="/2023/08/24/Python类与继承">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Python.png">
-    </a>
+      
+        <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Python.png">
+      
+      </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-time">
-        </i>2023-8-24 10:08</div>
+        </i>2023-8-24 10:08
+      </div>
       <a href="/2023/08/24/Python类与继承" class="post-title">
         <h3>Python 类的理解与使用</h3>
       </a>
       <div class="post-meta">
+        <span>
+          
+        </span>
         <span><i class="fa fa-tags"></i>
         
             <a href="/tags/Python/">Python<em>·</em></a>
@@ -463,9 +517,21 @@
             <a href="/categories/技术/">技术</a>
           
         </span>
+        <!-- <span><i class="iconfont icon-attention"></i>
+          本页共<span id="busuanzi_value_page_pv"> </span>次阅读
+        </span> -->
       </div>
       <div class="float-content">
-        <p></p>
+        <p style="color: #666;">
+        
+          
+            类的定义
+类（class），是具有相同特性（属性）和（方法）的对象（实例）的抽象模板。
+
+实例：同属
+          
+        
+        </p>
         <div class="post-bottom">
           <a href="/2023/08/24/Python类与继承" class="button-normal">
             <i class="iconfont icon-caidan"></i>
@@ -475,24 +541,31 @@
     </div>
   </div>
 </article>
+     
   
     
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
+      
+<article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
   <div class="post-thumb">
     <a href="/2023/08/16/每日一题D2：两数之和-1">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
-    </a>
+      
+        <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
+      
+      </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-time">
-        </i>2023-8-16 14:08</div>
+        </i>2023-8-16 14:08
+      </div>
       <a href="/2023/08/16/每日一题D2：两数之和-1" class="post-title">
         <h3>每日一题D2：两数之和(1)</h3>
       </a>
       <div class="post-meta">
+        <span>
+          
+        </span>
         <span><i class="fa fa-tags"></i>
         
             <a href="/tags/每日一题/">每日一题<em>·</em></a>
@@ -506,9 +579,16 @@
             <a href="/categories/技术-题库/">技术 题库</a>
           
         </span>
+        <!-- <span><i class="iconfont icon-attention"></i>
+          本页共<span id="busuanzi_value_page_pv"> </span>次阅读
+        </span> -->
       </div>
       <div class="float-content">
-        <p>了解哈希表</p>
+        <p style="color: #666;">
+        
+            了解哈希表
+        
+        </p>
         <div class="post-bottom">
           <a href="/2023/08/16/每日一题D2：两数之和-1" class="button-normal">
             <i class="iconfont icon-caidan"></i>
@@ -518,24 +598,31 @@
     </div>
   </div>
 </article>
+     
   
     
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
+      
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
   <div class="post-thumb">
     <a href="/2023/08/13/每日一题D1：斐波那契数(509)">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
-    </a>
+      
+        <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
+      
+      </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-time">
-        </i>2023-8-13 13:08</div>
+        </i>2023-8-13 13:08
+      </div>
       <a href="/2023/08/13/每日一题D1：斐波那契数(509)" class="post-title">
         <h3>每日一题D1：斐波那契数(509)</h3>
       </a>
       <div class="post-meta">
+        <span>
+          
+        </span>
         <span><i class="fa fa-tags"></i>
         
             <a href="/tags/每日一题/">每日一题<em>·</em></a>
@@ -549,9 +636,16 @@
             <a href="/categories/技术-题库/">技术 题库</a>
           
         </span>
+        <!-- <span><i class="iconfont icon-attention"></i>
+          本页共<span id="busuanzi_value_page_pv"> </span>次阅读
+        </span> -->
       </div>
       <div class="float-content">
-        <p>了解动态规划步骤</p>
+        <p style="color: #666;">
+        
+            了解动态规划步骤
+        
+        </p>
         <div class="post-bottom">
           <a href="/2023/08/13/每日一题D1：斐波那契数(509)" class="button-normal">
             <i class="iconfont icon-caidan"></i>
@@ -561,24 +655,31 @@
     </div>
   </div>
 </article>
+     
   
     
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
+      
+<article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
   <div class="post-thumb">
     <a href="/2023/07/13/一键将CSDN博客保存为PDF文件">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg">
-    </a>
+      
+        <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img@master/Img/fgo.jpg">
+      
+      </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-time">
-        </i>2023-7-13 13:07</div>
+        </i>2023-7-13 13:07
+      </div>
       <a href="/2023/07/13/一键将CSDN博客保存为PDF文件" class="post-title">
         <h3>一键将CSDN博客保存为PDF文件</h3>
       </a>
       <div class="post-meta">
+        <span>
+          
+        </span>
         <span><i class="fa fa-tags"></i>
         
         </span>
@@ -588,9 +689,16 @@
             <a href="/categories/技术/">技术</a>
           
         </span>
+        <!-- <span><i class="iconfont icon-attention"></i>
+          本页共<span id="busuanzi_value_page_pv"> </span>次阅读
+        </span> -->
       </div>
       <div class="float-content">
-        <p>使用浏览器控制台将CSDN博客一键保存为本地PDF文件</p>
+        <p style="color: #666;">
+        
+            使用浏览器控制台将CSDN博客一键保存为本地PDF文件
+        
+        </p>
         <div class="post-bottom">
           <a href="/2023/07/13/一键将CSDN博客保存为PDF文件" class="button-normal">
             <i class="iconfont icon-caidan"></i>
@@ -600,24 +708,31 @@
     </div>
   </div>
 </article>
+     
   
     
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
+      
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
   <div class="post-thumb">
     <a href="/2023/04/02/Pytorch-D01-数据操作">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png">
-    </a>
+      
+        <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png">
+      
+      </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-time">
-        </i>2023-4-2 08:04</div>
+        </i>2023-4-2 08:04
+      </div>
       <a href="/2023/04/02/Pytorch-D01-数据操作" class="post-title">
         <h3>Pytorch#D01:数据操作</h3>
       </a>
       <div class="post-meta">
+        <span>
+          
+        </span>
         <span><i class="fa fa-tags"></i>
         
             <a href="/tags/Pytorch/">Pytorch<em>·</em></a>
@@ -629,9 +744,16 @@
             <a href="/categories/技术/">技术</a>
           
         </span>
+        <!-- <span><i class="iconfont icon-attention"></i>
+          本页共<span id="busuanzi_value_page_pv"> </span>次阅读
+        </span> -->
       </div>
       <div class="float-content">
-        <p>学习Pytorch第一天捏</p>
+        <p style="color: #666;">
+        
+            学习Pytorch第一天捏
+        
+        </p>
         <div class="post-bottom">
           <a href="/2023/04/02/Pytorch-D01-数据操作" class="button-normal">
             <i class="iconfont icon-caidan"></i>
@@ -641,24 +763,31 @@
     </div>
   </div>
 </article>
+     
   
     
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
+      
+<article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
   <div class="post-thumb">
     <a href="/2023/03/29/Hexo支线-01">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
-    </a>
+      
+        <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
+      
+      </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-time">
-        </i>2023-3-29 16:03</div>
+        </i>2023-3-29 16:03
+      </div>
       <a href="/2023/03/29/Hexo支线-01" class="post-title">
         <h3>Hexo支线#01</h3>
       </a>
       <div class="post-meta">
+        <span>
+          
+        </span>
         <span><i class="fa fa-tags"></i>
         
             <a href="/tags/Web/">Web<em>·</em></a>
@@ -674,9 +803,16 @@
             <a href="/categories/技术/">技术</a>
           
         </span>
+        <!-- <span><i class="iconfont icon-attention"></i>
+          本页共<span id="busuanzi_value_page_pv"> </span>次阅读
+        </span> -->
       </div>
       <div class="float-content">
-        <p>复活Hexo</p>
+        <p style="color: #666;">
+        
+            复活Hexo
+        
+        </p>
         <div class="post-bottom">
           <a href="/2023/03/29/Hexo支线-01" class="button-normal">
             <i class="iconfont icon-caidan"></i>
@@ -686,24 +822,31 @@
     </div>
   </div>
 </article>
+     
   
     
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
+      
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
   <div class="post-thumb">
     <a href="/2022/05/15/Daily20220515">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
-    </a>
+      
+        <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
+      
+      </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-time">
-        </i>2022-5-15 23:05</div>
+        </i>2022-5-15 23:05
+      </div>
       <a href="/2022/05/15/Daily20220515" class="post-title">
         <h3>Daily20220515</h3>
       </a>
       <div class="post-meta">
+        <span>
+          
+        </span>
         <span><i class="fa fa-tags"></i>
         
         </span>
@@ -713,9 +856,20 @@
             <a href="/categories/生活/">生活</a>
           
         </span>
+        <!-- <span><i class="iconfont icon-attention"></i>
+          本页共<span id="busuanzi_value_page_pv"> </span>次阅读
+        </span> -->
       </div>
       <div class="float-content">
-        <p></p>
+        <p style="color: #666;">
+        
+          
+            崩溃好不容易改了模型，debug完，loss训练到0.2，结果测试一下直接无语了。
+原图
+原版PRN
+          
+        
+        </p>
         <div class="post-bottom">
           <a href="/2022/05/15/Daily20220515" class="button-normal">
             <i class="iconfont icon-caidan"></i>
@@ -725,24 +879,31 @@
     </div>
   </div>
 </article>
+     
   
     
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
+      
+<article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
   <div class="post-thumb">
     <a href="/2022/05/12/3DFaceRestruction01">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
-    </a>
+      
+        <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/trump_biden_3d.jpg">
+      
+      </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-time">
-        </i>2022-5-12 00:05</div>
+        </i>2022-5-12 00:05
+      </div>
       <a href="/2022/05/12/3DFaceRestruction01" class="post-title">
         <h3>基于深度学习的三维人脸重建#01：介绍</h3>
       </a>
       <div class="post-meta">
+        <span>
+          
+        </span>
         <span><i class="fa fa-tags"></i>
         
             <a href="/tags/计算机视觉/">计算机视觉<em>·</em></a>
@@ -756,9 +917,16 @@
             <a href="/categories/技术/">技术</a>
           
         </span>
+        <!-- <span><i class="iconfont icon-attention"></i>
+          本页共<span id="busuanzi_value_page_pv"> </span>次阅读
+        </span> -->
       </div>
       <div class="float-content">
-        <p>介绍基于深度学习三维人脸重建的研究目的、研究难点、研究现状</p>
+        <p style="color: #666;">
+        
+            介绍基于深度学习三维人脸重建的研究目的、研究难点、研究现状
+        
+        </p>
         <div class="post-bottom">
           <a href="/2022/05/12/3DFaceRestruction01" class="button-normal">
             <i class="iconfont icon-caidan"></i>
@@ -768,24 +936,31 @@
     </div>
   </div>
 </article>
+     
   
     
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
+      
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
   <div class="post-thumb">
     <a href="/2022/04/29/Hexo01">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
-    </a>
+      
+        <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/hexo-logo-avatar.png">
+      
+      </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-time">
-        </i>2022-4-29 23:04</div>
+        </i>2022-4-29 23:04
+      </div>
       <a href="/2022/04/29/Hexo01" class="post-title">
         <h3>Hexo建站#01：Hexo介绍</h3>
       </a>
       <div class="post-meta">
+        <span>
+          
+        </span>
         <span><i class="fa fa-tags"></i>
         
             <a href="/tags/Web/">Web<em>·</em></a>
@@ -801,9 +976,16 @@
             <a href="/categories/技术/">技术</a>
           
         </span>
+        <!-- <span><i class="iconfont icon-attention"></i>
+          本页共<span id="busuanzi_value_page_pv"> </span>次阅读
+        </span> -->
       </div>
       <div class="float-content">
-        <p>了解Hexo</p>
+        <p style="color: #666;">
+        
+            了解Hexo
+        
+        </p>
         <div class="post-bottom">
           <a href="/2022/04/29/Hexo01" class="button-normal">
             <i class="iconfont icon-caidan"></i>
@@ -813,17 +995,37 @@
     </div>
   </div>
 </article>
+     
   
 
 
     </main>
-      <!-- 首页默认取最最新文章集 -->
-    <!--  -->
   </div>
   
 </div>
+<!-- js -->
 
-    </div>    
+
+
+
+
+
+
+
+
+
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+<!-- daovoice聊天功能 -->
+
+
+<!-- weather -->
+  
+
+      <!-- body.end -->
+    </div>
+    <!-- search -->    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
@@ -851,99 +1053,166 @@
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
-    <!-- <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2023 Sandy<br>
-      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer> -->
-<footer id="colophon" class="site-footer" role="contentinfo">
-  <div class="site-info">
-    <div class="footertext">
-      <div class="img-preload">
-        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
-        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
-      </div>
-      <p style="color: #666666;">&copy 2018</p>
-    </div>
-    <div class="footer-device">
-    <p style="font-family: 'Ubuntu', sans-serif;">
-        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
-        </span>
-      </p>
-    </div>
-  </div><!-- .site-info -->
+    <!-- footer-->    
+    
+    <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+        <div class="footertext">
+          <div class="img-preload">
+              <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+              <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+          </div>
+        </div>
+        <!-- 网站数据统计 -->
+        <div class="footer-device">
+          <p style="font-family: 'Ubuntu', sans-serif;">
+            <span style="color: #ff9999;padding-left: 20px;">
+                <!-- 网站运行时间统计 -->
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <span id="time" align="center">载入时间中...</span>
+                <script>
+                var now = new Date(); 
+                function createtime() { 
+                      var grt= new Date("Wed Feb 12 2020 01:20:00 GMT+0800 (中国标准时间)");//在此处修改你的建站时间
+                      now.setTime(now.getTime()+250); 
+                      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                      document.getElementById("time").innerHTML = "小破站在各种灾难中苟活了 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒";      
+                  } 
+                  setInterval("createtime()",250);
+                </script>
+            </span> 
+          </p>
+        </div>
+        <div class="footer-device">
+          <p style="font-family: 'Ubuntu', sans-serif;">
+            <span style="color: #b9b9b9;padding-left: 20px;">
+              <!-- 全网站字数统计wordcount -->
+              
+              <!-- 不蒜子网页计数器 -->
+              
+              <span style="padding-left: 20px;"><i class="fa fa-fire" aria-hidden="true" style="color: #ff9999;display:inline-block"></i><span id="busuanzi_container_site_pv">总访问量： <span id="busuanzi_value_site_pv" style="color:#ff9999;"></span>次</span>
+              </span>
+              
+              
+              <span style="padding-left: 20px;"><i class="fa fa-user" aria-hidden="true" style="color: #ff9999;display:inline-block"></i><span id="busuanzi_container_site_uv">总访问人数： <span id="busuanzi_value_site_uv" style="color:#ff9999;"></span>人</span>
+              </span>
+              
+            </span>
+          </p>
+        </div>
+        <!-- 作者注明 -->
+        <div class="footer-device">
+          <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #b9b9b9;">
+                Copyright &copy; 2023
+                &nbsp;<a style="color: #ff9999;display:inline-block"> Sandy </a>
+                &nbsp;<i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> 
+                &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank" style="color: #ff9999;display:inline-block">Hexo</a>
+                |&nbsp;Theme&nbsp;<a href="https://gitee.com/cungudafa/hexo-theme-sakuraplus" target="_blank" style="color: #ff9999;display:inline-block">SakuraPlus</a>
+              </span>
+          </p>
+        </div>
+         <!-- 网站作者版权注明 -->
+         
+          <div id="footer-info" class="inner">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #ff9999;">
+                
+              </span>
+            </p>
+          </div>
+        
+    </div><!-- .site-info -->
 </footer>
 
 
-
-<!-- <script src="/js/tocbot.js"></script> -->
-<script type="text/javascript" src="/js/lib.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/lib.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script type="text/javascript" src="/js/InsightSearch.js"></script>
-<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
-<script type="text/javascript" src="/js/zoom.min.js"></script>
-<script type="text/javascript" src="/js/sakura-app.js"></script>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
-<script src="/js/botui.js"></script>
-<!-- 不蒜子 网页计数器 -->
-<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
-<script type="text/javascript">
-/* <![CDATA[ */
-if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/sdracula/Img/Img/","name":"Homepage.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
-} else {
-  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/sdracula/Img/Img/","name":"Homepage.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
-}
-/* ]]> */
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/InsightSearch.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/sakura-app.js"></script>
 
-</script>
-<script>
-$(document).ready(function() {
-  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
-    if ($(".pattern-center").length > 0) { //有图的情况
-      tocbot.init({
-          // Where to render the table of contents.
-          tocSelector: '.toc', // 放置目录的容器
-          // Where to grab the headings to build the table of contents.
-          contentSelector: '.entry-content', // 正文内容所在
-          // Which headings to grab inside of the contentSelector element.
-          scrollSmooth: true,
-          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-          headingsOffset: -400,
-          scrollSmoothOffset: -85
-      });
-    } else {
-      tocbot.init({
-          // Where to render the table of contents.
-          tocSelector: '.toc', // 放置目录的容器
-          // Where to grab the headings to build the table of contents.
-          contentSelector: '.entry-content', // 正文内容所在
-          // Which headings to grab inside of the contentSelector element.
-          scrollSmooth: true,
-          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-          headingsOffset: -85,
-          scrollSmoothOffset: -85
-      });
-    }
-    var offsetTop = $('.toc').offset().top - 95;
-    window.onscroll = function() {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-      if (scrollTop >= offsetTop) {
-        $('.toc').addClass('toc-fixed');
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- fancybox大图查看 需jq -->
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/jquery.fancybox.min.js"></script>
+  <script>
+    $('[data-fancybox="images"]').fancybox({
+      thumbs : {
+        autoStart : true //缩略图
+      }
+    });
+    $('[data-fancybox]').fancybox({
+      protect: true,//图片右键不能下载
+      youtube : {
+          controls : 0,
+          showinfo : 0
+      },
+      vimeo : {
+          color : 'f00'
+      }
+    });
+  </script>
+
+
+<!-- 自适应浏览器 -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  } else {
+    var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  }
+  /* ]]> */
+  
+  </script>
+  <script>
+  $(document).ready(function() {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { //有图的情况
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc', // 放置目录的容器
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.entry-content', // 正文内容所在
+            // Which headings to grab inside of the contentSelector element.
+            scrollSmooth: true,
+            headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+            headingsOffset: -400,
+            scrollSmoothOffset: -85
+        });
       } else {
-        $('.toc').removeClass('toc-fixed');
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc', // 放置目录的容器
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.entry-content', // 正文内容所在
+            // Which headings to grab inside of the contentSelector element.
+            scrollSmooth: true,
+            headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+            headingsOffset: -85,
+            scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
       }
     }
-  }
-});
-</script>
-
+  });
+  </script>
+    <!-- Side menu -->
     <div class="openNav no-select" style="height: 50px;">
       <div class="iconflat no-select" style="width: 50px; height: 50px;">
         <div class="icon"></div>
@@ -953,17 +1222,20 @@ $(document).ready(function() {
       </div>
     </div>
   </section>
+  <!-- Floating window -->
   <div id="mo-nav" class="">
   <div class="m-avatar">
-    <img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/joker.jpg">
+    <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg">
   </div>
-  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">NUAASandy</p>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">cungudafa姑</p>
   <p style="text-align: center; word-spacing: 20px;">
     
       
-        <a href="http://github.com/sdracula" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+        <a href="http://github.com/cungudafa" class="fa fa-github" target="_blank" style="color: #333; margin-left: 20px"></a>
       
-        <a href="http://space.bilibili.com/24152523" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+        <a href="http://weibo.com/3829198906/info" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left: 20px"></a>
+      
+        <a href="https://blog.csdn.net/cungudafa" class="fa fa-star" target="_blank" style="color: #ff9900; margin-left: 20px"></a>
       
     
   </p>
@@ -990,6 +1262,20 @@ $(document).ready(function() {
           <ul class="sub-menu">
             
               <li>
+                <a href="/analytics/">
+                  <i class="fa fa-line-chart" aria-hidden="true"></i>
+                  统计
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags">
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  标签
+                </a>
+              </li>
+            
+              <li>
                 <a href="/categories/技术/">
                   <i class="fa fa-code" aria-hidden="true"></i>
                   技术
@@ -998,22 +1284,8 @@ $(document).ready(function() {
             
               <li>
                 <a href="/categories/生活/">
-                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                  生活
-                </a>
-              </li>
-            
-              <li>
-                <a href="/categories/科研/">
                   <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                  科研
-                </a>
-              </li>
-            
-              <li>
-                <a href="/categories/读书/">
-                  <i class="fa fa-book" aria-hidden="true"></i>
-                  读书
+                  生活
                 </a>
               </li>
             
@@ -1032,16 +1304,30 @@ $(document).ready(function() {
           <ul class="sub-menu">
             
               <li>
-                <a href="/bangumi/">
-                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
-                  番组
+                <a href="/artitalk/">
+                  <i class="fa fa-commenting-o fa-commenting" aria-hidden="true"></i>
+                  说说
                 </a>
               </li>
             
               <li>
-                <a href="/music/">
-                  <i class="fa fa-headphones" aria-hidden="true"></i>
-                  歌单
+                <a href="/photos/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  相册
+                </a>
+              </li>
+            
+              <li>
+                <a href="/books/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  悦读
+                </a>
+              </li>
+            
+              <li>
+                <a href="/movies/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  追剧
                 </a>
               </li>
             
@@ -1049,73 +1335,106 @@ $(document).ready(function() {
         
       </li>
     
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
   </ul>
-  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2020 hexo-sakuraplus</p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-<style>
-  .aplayer .aplayer-lrc {
-    height: 35px;
-  }
-  .aplayer .aplayer-lrc p{
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px !important;
-  }
-  .aplayer .aplayer-lrc p.aplayer-lrc-current{
-    color: #FF1493;
-  }
-  .aplayer.aplayer-narrow .aplayer-body{
-    left: -66px !important;
-  }
-  .aplayer.aplayer-fixed .aplayer-lrc {
-    display: none;
-  }
-  .aplayer .aplayer-lrc.aplayer-lrc-hide {
-      display:none !important;
-  }
-  .aplayer.aplayer-fixed .lrc-show {
-    display: block;
-    background: rgba(255, 255, 255, 0.8);
-  }
-</style>
-<meting-js
+  
+   <!-- pages壁纸切换 -->
+ 
+    <div class="skin-menu no-select" id="mainskin"  style="position: fixed">
+        <div class="theme-controls row-container">
+            <ul class="menu-list">
+                <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+                <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+                <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+                <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+                <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+                <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+                <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+                <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+        <div class="font-family-controls row-container">
+            <button type="button" class="control-btn-serif selected" data-mode="serif" onclick="mashiro_global.font_control.change_font()">Serif</button>
+            <button type="button" class="control-btn-sans-serif" data-mode="sans-serif" onclick="mashiro_global.font_control.change_font()">Sans Serif</button>
+        </div>
+    </div>   
+    <canvas id="night-mode-cover"></canvas> 
+        <div class="changeSkin-gear no-select">
+        <div class="keys" id="setbtn"> <span id="open-skinMenu"> 切换壁纸 | SCHEME TOOL 
+            &nbsp;<i class="iconfont icon-gear inline-block rotating"></i> </span></div>
+    </div><!-- skin.end -->
 
-    id="7423369900"
+  <!-- left side bar -->
 
-    server="netease"
-
-    type="playlist"
-
-    fixed="true"
-
-    autoplay="false"
-
-    loop="all"
-
-    order="random"
-
-    preload="auto"
-
-    volume="0.6"
-
-    mutex="true"
-
-</meting-js>
-<script>
-  $(function(){
-    $('body').on('click', '.aplayer', function(){
-      if($('.aplayer-button').hasClass('aplayer-play')) {
-        $('.aplayer-lrc').removeClass('lrc-show');
-      } else {
-        $('.aplayer-lrc').addClass('lrc-show');
-      }
-    })
-  });
-</script>
-</body>
+ </body>
 </html>
