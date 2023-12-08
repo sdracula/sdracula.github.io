@@ -315,17 +315,17 @@
         quickSort(p,i+1,r);//递归地对temp右边元素进行排序
     }
 }
-
-快速排序后，元素的排序为从小到大，根据题目要求从大到小排序，反向输出
-```反向输出
-for(int j=n-1; j&gt;=0; j--){
+</code></pre>
+<p>快速排序后，元素的排序为从小到大，根据题目要求从大到小排序，反向输出</p>
+<pre><code class="反向输出">for(int j=n-1; j&gt;=0; j--){
             if(j==0)
                 cout&lt;&lt;input_str[j]&lt;&lt;endl;
             else
                 cout&lt;&lt;input_str[j]&lt;&lt;&quot; &quot;;            
 }
 </code></pre>
-<h2 id><a href="#" class="headerlink" title="`"></a><code>`</code></h2>
+<hr>
+
         </div>
         <!-- .entry-content -->
         <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
