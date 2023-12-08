@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a | Sandy</title>
+  <title itemprop="name">Pytorch-D02-Dataloader与DataSet | Sandy</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -239,278 +239,257 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 75px;">
-</div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
-    </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2023年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      12月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2023/12/08/HDU2020绝对值排序">
-                          <span style="color:#0bf;">
-                          08日12:51:05</span>
-                          D3:HDU2020绝对值排序
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      08月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2023/08/29/Pytorch-D02-Dataloader">
-                          <span style="color:#0bf;">
-                          29日19:40:14</span>
-                          Pytorch-D02-Dataloader与DataSet
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2023/08/24/Python类与继承">
-                          <span style="color:#0bf;">
-                          24日10:36:54</span>
-                          Python 类的理解与使用
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2023/08/16/每日一题D2：两数之和-1">
-                          <span style="color:#0bf;">
-                          16日14:51:05</span>
-                          每日一题D2：两数之和(1)
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2023/08/13/每日一题D1：斐波那契数(509)">
-                          <span style="color:#0bf;">
-                          13日13:25:30</span>
-                          每日一题D1：斐波那契数(509)
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      07月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2023/07/13/一键将CSDN博客保存为PDF文件">
-                          <span style="color:#0bf;">
-                          13日13:44:01</span>
-                          一键将CSDN博客保存为PDF文件
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      04月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2023/04/02/Pytorch-D01-数据操作">
-                          <span style="color:#0bf;">
-                          02日08:48:15</span>
-                          Pytorch#D01:数据操作
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      03月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2023/03/29/Hexo支线-01">
-                          <span style="color:#0bf;">
-                          29日16:01:31</span>
-                          Hexo支线#01
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2022年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      05月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2022/05/15/Daily20220515">
-                          <span style="color:#0bf;">
-                          15日23:31:03</span>
-                          Daily20220515
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2022/05/12/3DFaceRestruction01">
-                          <span style="color:#0bf;">
-                          12日00:54:30</span>
-                          基于深度学习的三维人脸重建#01：介绍
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      04月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2022/04/29/Hexo01">
-                          <span style="color:#0bf;">
-                          29日23:20:00</span>
-                          Hexo建站#01：Hexo介绍
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-            </div>
-            
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
 
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Pytorchlogo.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Pytorch-D02-Dataloader与DataSet</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://sdracula.github.io">
+            <img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/joker.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="https://sdracula.github.io">Sandy</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2023-8-29<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="DataLoader数据加载器与DataSets数据集"><a href="#DataLoader数据加载器与DataSets数据集" class="headerlink" title="DataLoader数据加载器与DataSets数据集"></a>DataLoader数据加载器与DataSets数据集</h1><p>理想情况下，我们希望数据集代码与模型训练代码分离。这样代码可以有更好的可读性和模块化性。在Pytorch中，我们可以使用<code>torch.utils.data.DataLoader</code>和<code>torch.utils.data.Dataset</code>使用预加载的数据集或者自己的数据。<code>Dataset</code>储存了样本及其对应的标签，而<code>DataLoader</code>在数据集周围包装了一个可迭代对象。</p>
+<h2 id="torch-utils-data-DataLoader"><a href="#torch-utils-data-DataLoader" class="headerlink" title="torch.utils.data.DataLoader()"></a>torch.utils.data.DataLoader()</h2><pre><code>torch.utils.data.DataLoader(dataset, batch_size=1, shuffle=False, sample=None, batch_sample=None, num_workers=0, collate_fn=None, pin_memory=False, drop_last=False, timeout=0, worker_init_fn=None, multiprocessing_context=None)
+</code></pre><p>功能：构建可迭代的数据装载器</p>
+<ul>
+<li>dataset:Dataset类，决定数据从哪里读取以及如何读取</li>
+<li>batchsize：批大小</li>
+<li>num_works：是否多进程读取数据</li>
+<li>shuffle：每个epoch是否乱序</li>
+<li>drop-last：当样本数不能被batchsize整除时，是否舍弃最后一批数据</li>
+</ul>
+<h3 id="Epoch-Iteration-Batchsize"><a href="#Epoch-Iteration-Batchsize" class="headerlink" title="Epoch, Iteration, Batchsize"></a>Epoch, Iteration, Batchsize</h3><ul>
+<li>Epoch：所有训练样本都已经输入到模型中，称为一个Epoch</li>
+<li>Iteration：一批样本输入到模型中，称为一个Iteration</li>
+<li>Batchsize：批大小，决定一个Iteration有多少样本，也决定了一个Epoch有多少个Iteration</li>
+</ul>
+<h2 id="torch-utils-data-Dataset"><a href="#torch-utils-data-Dataset" class="headerlink" title="torch.utils.data.Dataset"></a>torch.utils.data.Dataset</h2><p>功能：Dataset是抽象类，所有自定义的Dataset都需要继承此类，并且重写<code>__getitem()__</code>方法和<code>__len()__</code>方法。<code>__getitem()__</code>方法的作用是接收一个索引，返回索引对应的样本和标签；<code>__len()__</code>方法是返回所有样本的数量。</p>
+<h4 id="数据读取包含三个方面"><a href="#数据读取包含三个方面" class="headerlink" title="数据读取包含三个方面"></a>数据读取包含三个方面</h4><ul>
+<li>读取哪些数据：每个Iteration读取一个Batchsize大小的数据，每个Iteration应该读取哪些数据。</li>
+<li>从哪里读取数据：如何找到硬盘中的数据，应该在哪里设置文件路径参数。</li>
+<li>如何读取数据：不同的文件需要不同的读取方法和库。</li>
+</ul>
+<h3 id="示例数据结构"><a href="#示例数据结构" class="headerlink" title="示例数据结构"></a>示例数据结构</h3><ul>
+<li>RMB_data<ul>
+<li>1</li>
+<li>100</li>
+</ul>
+</li>
+</ul>
+<p>划分数据集为训练集、验证集和测试集，比例为8：1：1。划分好的数据路径构造如下：</p>
+<ul>
+<li>rmb_split<ul>
+<li>train<ul>
+<li>1</li>
+<li>100</li>
+</ul>
+</li>
+<li>valid<ul>
+<li>1</li>
+<li>100</li>
+</ul>
+</li>
+<li>test<ul>
+<li>1</li>
+<li>100</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>编写一个<code>get-img_info()</code>方法，读取每一个图片的路径和对应的标签，组成一个元组，再把所有的元组作为list存放到<code>self.data.info</code>变量中，标签映射从0开始的整数:<code>rmb_label = {&quot;1&quot;: 0, &quot;100&quot;: 1}</code>。</p>
+<pre><code>  @staticmethod
+  def get_img_info(data_dir):
+      data_info = list()
+      # data_dir 是训练集、验证集或者测试集的路径
+      for root, dirs, _ in os.walk(data_dir):
+          # 遍历类别
+          # dirs [&#39;1&#39;, &#39;100&#39;]
+          for sub_dir in dirs:
+              # 文件列表
+              img_names = os.listdir(os.path.join(root, sub_dir))
+              # 取出 jpg 结尾的文件
+              img_names = list(filter(lambda x: x.endswith(&#39;.jpg&#39;), img_names))
+              # 遍历图片
+              for i in range(len(img_names)):
+                  img_name = img_names[i]
+                  # 图片的绝对路径
+                  path_img = os.path.join(root, sub_dir, img_name)
+                  # 标签，这里需要映射为 0、1 两个类别
+                  label = rmb_label[sub_dir]
+                  # 保存在 data_info 变量中
+                  data_info.append((path_img, int(label)))
+      return data_info
+</code></pre><p>然后在<code>Dataset</code>的初始化函数中调用<code>get_imginfo()</code>方法。</p>
+<pre><code>    def __init__(self, data_dir, transform=None):
+        &quot;&quot;&quot;
+        rmb面额分类任务的Dataset
+        :param data_dir: str, 数据集所在路径
+        :param transform: torch.transform，数据预处理
+        &quot;&quot;&quot;
+        # data_info存储所有图片路径和标签，在DataLoader中通过index读取样本
+        self.data_info = self.get_img_info(data_dir)
+        self.transform = transform
+</code></pre><p>然后在<code>__getitem__()</code>方法中根据 <code>index</code>读取<code>self.data-info</code>中路径对应的数据，并在这里做transform操作，返回的是样本和标签。</p>
+<pre><code>    def __getitem__(self, index):
+        # 通过 index 读取样本
+        path_img, label = self.data_info[index]
+        # 注意这里需要 convert(&#39;RGB&#39;)
+        img = Image.open(path_img).convert(&#39;RGB&#39;)     # 0~255
+        if self.transform is not None:
+            img = self.transform(img)   # 在这里做transform，转为tensor等等
+        # 返回是样本和标签
+        return img, label
+</code></pre><p>在<code>__len__()</code>方法中返回<code>self.data.info</code>的长度，即为所有样本的数量。</p>
+<pre><code>    # 返回所有样本的数量
+    def __len__(self):
+        return len(self.data_info)
+</code></pre><p>在<code>train-lenet.py</code>中，分5步构建模型。</p>
+<p>第一步设置数据。首先定义训练集、验证集和测试集的路径，定义训练集和测试集的<code>transforms</code>。然后构建训练集和验证集的<code>RMBDataset</code>对象，把对应的路径和<code>transforms</code>传进去。再构建<code>DataLoader</code>,设置batch_size,其中训练集设置<code>shuffle=True</code>,表示每个Epoch都打乱样本。</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2023/12/08/HDU2020绝对值排序" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                D3:HDU2020绝对值排序</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2023/08/24/Python类与继承" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Python.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/Python.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Python 类的理解与使用</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+    <div id="waline"></div>
+    <style>
+    #waline textarea {
+        box-sizing: border-box;
+        background: url("https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich2.gif") 100% 100% no-repeat;
+    }
+    </style>
+    <script>
+        Waline({
+              el: '#waline',
+              serverURL: '',
+              pageSize: '10',
+              lang: 'zh-CN',
+              requiredFields: ['nick','mail'], //设置必填项
+              placeholder: '祝开开心心！',
+              visitor: 'true',
+              emoji: [
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
+              ],
+              avatar: 'mp',
+              dark: 'auto',
+            });
+    </script>
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="https://sdracula.github.io" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/joker.jpg" itemprop="image" alt="Sandy" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://sdracula.github.io" itemprop="url" rel="author">Sandy</a>
+            </h3>
           </div>
         </div>
-      </article>
-    </div>
-  </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">

@@ -480,7 +480,7 @@ a, a.item(), float(a), int(a)
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>病树历火，繁华寥落雏芽生。</p>
+        <p><i class="iconfont icon-write"></i></p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->
