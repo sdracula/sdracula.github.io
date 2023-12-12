@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a: 2023 | Sandy</title>
+  <title itemprop="name">伪装目标检测：SINetv2复现 | Sandy</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -239,291 +239,154 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 75px;">
-</div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
-    </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2023年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      12月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2023/12/12/伪装目标检测：SINetv2复现">
-                          <span style="color:#0bf;">
-                          12日14:25:47</span>
-                          伪装目标检测：SINetv2复现
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2023/12/08/HDU2020绝对值排序">
-                          <span style="color:#0bf;">
-                          08日12:51:05</span>
-                          D3:HDU2020绝对值排序
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      08月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2023/08/29/Pytorch-D02-Dataloader">
-                          <span style="color:#0bf;">
-                          29日19:40:14</span>
-                          Pytorch-D02-Dataloader与DataSet
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2023/08/24/Python类与继承">
-                          <span style="color:#0bf;">
-                          24日10:36:54</span>
-                          Python 类的理解与使用
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2023/08/16/每日一题D2：两数之和-1">
-                          <span style="color:#0bf;">
-                          16日14:51:05</span>
-                          每日一题D2：两数之和(1)
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2023/08/13/每日一题D1：斐波那契数(509)">
-                          <span style="color:#0bf;">
-                          13日13:25:30</span>
-                          每日一题D1：斐波那契数(509)
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      07月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2023/07/13/一键将CSDN博客保存为PDF文件">
-                          <span style="color:#0bf;">
-                          13日13:44:01</span>
-                          一键将CSDN博客保存为PDF文件
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      04月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2023/04/02/Pytorch-D01-数据操作">
-                          <span style="color:#0bf;">
-                          02日08:48:15</span>
-                          Pytorch#D01:数据操作
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      03月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2023/03/29/Hexo支线-01">
-                          <span style="color:#0bf;">
-                          29日16:01:31</span>
-                          Hexo支线#01
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2022年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      05月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2022/05/15/Daily20220515">
-                          <span style="color:#0bf;">
-                          15日23:31:03</span>
-                          Daily20220515
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2022/05/12/3DFaceRestruction01">
-                          <span style="color:#0bf;">
-                          12日00:54:30</span>
-                          基于深度学习的三维人脸重建#01：介绍
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      04月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2022/04/29/Hexo01">
-                          <span style="color:#0bf;">
-                          29日23:20:00</span>
-                          Hexo建站#01：Hexo介绍
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-            </div>
-            
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
 
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sdracula/Img/Img/4acc82e67a87abc1ee206edb5bc76e0.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/4acc82e67a87abc1ee206edb5bc76e0.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      伪装目标检测：SINetv2复现</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://sdracula.github.io">
+            <img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/joker.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="https://sdracula.github.io">Sandy</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2023-12-12<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="SINetv2复现"><a href="#SINetv2复现" class="headerlink" title="SINetv2复现"></a>SINetv2复现</h1><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="创建Python3-8虚拟环境"><a href="#创建Python3-8虚拟环境" class="headerlink" title="创建Python3.8虚拟环境"></a>创建Python3.8虚拟环境</h3><pre><code class="终端">!conda create -n SINetv2 python=3.8
+</code></pre>
+<h3 id="安装opencv-python、scipy、tensorboardX等"><a href="#安装opencv-python、scipy、tensorboardX等" class="headerlink" title="安装opencv-python、scipy、tensorboardX等"></a>安装opencv-python、scipy、tensorboardX等</h3><pre><code class="终端">!pip3 install opencv-python scipy tensorboardX
+</code></pre>
+<p>###安装Pytorch<br>首先在命令行执行如下命令，得到CUDA版本</p>
+<pre><code class="终端">!nvcc --version
+</code></pre>
+<p>根据CUDA版本在Pytorch官网复制对应版本下载链接至终端执行</p>
+<pre><code class="终端">!pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+</code></pre>
+<p>环境配置完成（可能有遗漏，但是大概率遇到缺少模块的报错信息<code>pip install *</code>就能解决）</p>
+<h2 id="训练-amp-测试"><a href="#训练-amp-测试" class="headerlink" title="训练&amp;测试"></a>训练&amp;测试</h2><p>在Camouflage Dataset2600数据集上训练了80个EPOCH，Best MAE = 0.0033215<br>测试效果如下：<br><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/%E5%9B%BE%E7%89%871.png" alt><br>可以看到整体轮廓分割效果较好，小目标分割细节仍有所欠缺。</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2023/12/08/HDU2020绝对值排序" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/bg-acca.jpeg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                D3:HDU2020绝对值排序</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+    <div id="waline"></div>
+    <style>
+    #waline textarea {
+        box-sizing: border-box;
+        background: url("https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich2.gif") 100% 100% no-repeat;
+    }
+    </style>
+    <script>
+        Waline({
+              el: '#waline',
+              serverURL: '',
+              pageSize: '10',
+              lang: 'zh-CN',
+              requiredFields: ['nick','mail'], //设置必填项
+              placeholder: '祝开开心心！',
+              visitor: 'true',
+              emoji: [
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
+              ],
+              avatar: 'mp',
+              dark: 'auto',
+            });
+    </script>
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="https://sdracula.github.io" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/sdracula/Img/Img/joker.jpg" itemprop="image" alt="Sandy" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://sdracula.github.io" itemprop="url" rel="author">Sandy</a>
+            </h3>
           </div>
         </div>
-      </article>
-    </div>
-  </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
