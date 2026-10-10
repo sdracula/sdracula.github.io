@@ -25,7 +25,7 @@
     var source = state.data[type]
     if (!source) return '数据暂未加载，可稍后重试'
     if (type === 'article') return '按文章发布日期统计'
-    if (type === 'fitness') return '提交或修改打卡后自动更新'
+    if (type === 'fitness') return '修改记录文件后自动更新'
     return '同步于 ' + new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(source.lastSuccessfulSync)) + ' · 提交次数'
   }
   function select (type) {
@@ -46,9 +46,9 @@
     root.querySelector('.activity-status').textContent = status(state.selected)
     var action = root.querySelector('.activity-action')
     action.hidden = state.selected === 'article'
-    action.textContent = state.selected === 'fitness' ? '健身打卡 ↗' : '去力扣刷题 ↗'
+    action.textContent = state.selected === 'fitness' ? '编辑健身记录 ↗' : '去力扣刷题 ↗'
     action.href = state.selected === 'fitness'
-      ? 'https://github.com/sdracula/sdracula.github.io/issues/new?template=fitness-check-in.yml'
+      ? 'https://github.com/sdracula/sdracula.github.io/edit/main/data/fitness.md'
       : 'https://leetcode.cn/u/sdracula/'
     root.querySelector('.activity-detail').textContent = '点击日期格查看当天记录'
   }
@@ -134,7 +134,7 @@
           var text = target.dataset.date + ' · ' + (info.pending ? '尚未同步，请等待下一次更新' : info.value + ' ' + units[target.dataset.calendar])
           if (target.dataset.calendar === 'fitness' && state.data.fitness) {
             var entries = state.data.fitness.entries.filter(function (entry) { return entry.date === target.dataset.date })
-            if (entries.length) text += ' · ' + entries.map(function (entry) { return entry.activity }).join('、')
+            if (entries.length) text += ' · ' + entries.map(function (entry) { return entry.activity + ' ' + entry.minutes + ' 分钟' + (entry.note ? '（' + entry.note + '）' : '') }).join('、')
           }
           root.querySelector('.activity-detail').textContent = text
         }
