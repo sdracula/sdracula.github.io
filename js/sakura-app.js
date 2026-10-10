@@ -565,20 +565,59 @@ $(document).ready(function () {
   add_upload_tips()
 })
 
+function loadHeroBackground (source) {
+  var targets = document.querySelectorAll('.centerbg')
+  if (!targets.length) return
+  var fallback = '/images/hero-fallback.svg'
+  var state = window.sakuraHeroBackground || (window.sakuraHeroBackground = { request: 0, timer: null, image: null })
+  var request = ++state.request
+  window.clearTimeout(state.timer)
+  if (state.image) { state.image.onload = null; state.image.onerror = null }
+  // Keep a local background visible while preloading, including when the API fails.
+  if (!state.loaded) Array.prototype.forEach.call(targets, function (target) {
+    target.style.backgroundImage = 'url("' + fallback + '")'
+  })
+  var sources = [source, fallback]
+  function attempt (index) {
+    if (request !== state.request || index >= sources.length) return
+    var image = new Image()
+    state.image = image
+    function failed () {
+      if (request !== state.request || state.image !== image) return
+      window.clearTimeout(state.timer)
+      image.onload = null; image.onerror = null
+      if (request === state.request) attempt(index + 1)
+    }
+    image.onload = function () {
+      if (request !== state.request || state.image !== image) return
+      window.clearTimeout(state.timer)
+      if (!image.naturalWidth) { failed(); return }
+      image.onload = null; image.onerror = null
+      state.loaded = sources[index]
+      Array.prototype.forEach.call(document.querySelectorAll('.centerbg'), function (target) {
+        target.style.backgroundImage = 'url(' + JSON.stringify(sources[index]) + '), url("' + fallback + '")'
+        target.dataset.heroSource = index === 0 ? 'primary' : 'local'
+      })
+    }
+    image.onerror = failed
+    state.timer = window.setTimeout(failed, 8000)
+    image.src = sources[index]
+  }
+  attempt(0)
+}
+
 function nextBG () {
   bgindex = bgindex + 1
-  console.log(bg[Math.abs(bgindex % bg.length)])
-  $('.centerbg').css('background-image', 'url("' + bg[Math.abs(bgindex % bg.length)] + '")')
+  loadHeroBackground(bg[Math.abs(bgindex % bg.length)])
 }
 
 function preBG () {
   bgindex = bgindex - 1
-  console.log(bg[Math.abs(bgindex % bg.length)])
-  $('.centerbg').css('background-image', 'url("' + bg[Math.abs(bgindex % bg.length)] + '")')
+  loadHeroBackground(bg[Math.abs(bgindex % bg.length)])
 }
 $(document).ready(function () {
   var bgindex = Math.floor(Math.random() * bg.length)
-  $('.centerbg').css('background-image', 'url("' + bg[bgindex] + '")')
+  loadHeroBackground(bg[bgindex])
   $('#bg-next').click(function () {
     nextBG()
   })

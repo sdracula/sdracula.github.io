@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#25465f"/><stop offset="1" stop-color="#b5c5cd"/></linearGradient>
+    <linearGradient id="water" x2="0" y2="1"><stop stop-color="#6f95a9"/><stop offset="1" stop-color="#24485e"/></linearGradient>
+    <linearGradient id="near" x2="0" y2="1"><stop stop-color="#335b66"/><stop offset="1" stop-color="#17333f"/></linearGradient>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h1920v1080H0z"/>
+  <circle cx="1440" cy="252" r="72" fill="#f4dfb6" opacity=".8"/>
+  <path fill="#718d9b" d="M0 612 210 406 365 530 594 326 830 577 1058 377 1270 521 1556 340 1920 603v477H0z"/>
+  <path fill="#466b7b" d="M0 688 259 554 481 650 726 486 932 645 1125 565 1380 652 1631 469 1920 620v460H0z"/>
+  <path fill="url(#water)" d="M0 728h1920v352H0z"/>
+  <path fill="url(#near)" d="M0 645 148 706 309 740 577 794 300 857 0 909zM1920 635l-166 110-239 58 191 53 214 27z"/>
+  <path stroke="#bdd0d7" stroke-width="3" opacity=".25" d="M491 866h558m137 53h445m-966 62h610"/>
+</svg>

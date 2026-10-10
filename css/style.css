@@ -3929,6 +3929,9 @@ li.feature-2 {
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-size:cover;
+    background-color:#385f7f;
+    background-image:url('/images/hero-fallback.svg');
+    background-position:center center;
     z-index:-1
 }
 @media(max-width:560px) {
