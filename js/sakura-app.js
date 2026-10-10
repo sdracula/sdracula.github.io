@@ -22,6 +22,15 @@ function cloneObject (a) {
   }
 }
 
+// Load the shared calendar controller once, including on direct archive visits.
+if (window.sakuraActivityCalendars) {
+  window.sakuraActivityCalendars.refresh()
+} else if (!window.sakuraActivityCalendarLoading) {
+  window.sakuraActivityCalendarLoading = true
+  $.getScript('/js/activity-calendars.js?v=20261010')
+    .fail(function () { window.sakuraActivityCalendarLoading = false })
+}
+
 mashiro_global.variables = new function () {
   this.has_bot_ui = false
   this.isNight = false
