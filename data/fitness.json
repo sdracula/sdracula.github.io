@@ -2,7 +2,16 @@
   "version": 1,
   "metric": "training-minutes",
   "source": "data/fitness.md",
-  "lastSuccessfulSync": "2026-10-10T04:36:27.321Z",
-  "days": {},
-  "entries": []
+  "lastSuccessfulSync": "2026-10-10T05:01:31.804Z",
+  "days": {
+    "2026-10-09": 60
+  },
+  "entries": [
+    {
+      "date": "2026-10-09",
+      "activity": "健身",
+      "minutes": 60,
+      "note": ""
+    }
+  ]
 }
