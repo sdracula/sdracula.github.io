@@ -1,0 +1,34 @@
+name: Verify public LeetCode CN calendar
+
+on:
+  push:
+    branches:
+      - codex/verify-leetcode-cn-20261010
+    paths:
+      - scripts/sync-leetcode-cn.mjs
+      - .github/workflows/verify-leetcode-cn.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+      - name: Query public calendar without login credentials
+        run: node scripts/sync-leetcode-cn.mjs sdracula data/leetcode.json
+      - name: Upload verified public calendar
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: verified-leetcode-cn-calendar
+          path: data/leetcode.json
+          if-no-files-found: error
+          retention-days: 7
