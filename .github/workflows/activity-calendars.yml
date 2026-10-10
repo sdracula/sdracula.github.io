@@ -37,6 +37,14 @@ jobs:
         id: leetcode
         continue-on-error: true
         run: node scripts/sync-leetcode-cn.mjs sdracula data/leetcode.json
+      - name: Test GitHub calendar sync
+        run: node --test scripts/sync-github-calendar.test.mjs
+      - name: Sync public GitHub contribution calendar
+        id: github
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/sync-github-calendar.mjs sdracula data/github.json
       - name: Preserve successful snapshots
         run: |
           git config user.name 'github-actions[bot]'
@@ -53,7 +61,7 @@ jobs:
         with:
           path: '_site'
       - name: Report stale sources
-        if: steps.leetcode.outcome == 'failure'
+        if: steps.leetcode.outcome == 'failure' || steps.github.outcome == 'failure'
         run: echo 'A source could not be refreshed. The last successful snapshot is retained.'
 
   deploy:

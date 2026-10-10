@@ -27,7 +27,7 @@ if (window.sakuraActivityCalendars) {
   window.sakuraActivityCalendars.refresh()
 } else if (!window.sakuraActivityCalendarLoading) {
   window.sakuraActivityCalendarLoading = true
-  $.getScript('/js/activity-calendars.js?v=20261010-file')
+  $.getScript('/js/activity-calendars.js?v=20261010-four')
     .fail(function () { window.sakuraActivityCalendarLoading = false })
 }
 

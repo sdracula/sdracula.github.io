@@ -1,9 +1,9 @@
 (function () {
   'use strict'
   if (window.sakuraActivityCalendars) { window.sakuraActivityCalendars.refresh(); return }
-  var types = ['article', 'fitness', 'leetcode']
-  var names = { article: '文章日历', fitness: '健身日历', leetcode: '力扣日历' }
-  var units = { article: '篇文章', fitness: '分钟训练', leetcode: '次提交' }
+  var types = ['article', 'fitness', 'leetcode', 'github']
+  var names = { article: '文章日历', fitness: '健身日历', leetcode: '力扣日历', github: 'Git 日历' }
+  var units = { article: '篇文章', fitness: '分钟训练', leetcode: '次提交', github: '次贡献' }
   var state = { data: {}, promise: null, fetched: 0, selected: 'article' }
   try { if (types.indexOf(localStorage.getItem('activity-calendar')) >= 0) state.selected = localStorage.getItem('activity-calendar') } catch (e) {}
   var dateFormat = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' })
@@ -19,6 +19,7 @@
     var source = state.data[type]
     if (!source) return { value: 0, pending: true }
     var pending = type === 'leetcode' && (source.coverageYears.indexOf(Number(date.slice(0, 4))) < 0 || date > dateKey(new Date(source.lastSuccessfulSync)))
+    if (type === 'github') pending = date < source.coverageStart || date > source.coverageEnd
     return { value: source.days[date] || 0, pending: pending }
   }
   function status (type) {
@@ -26,42 +27,48 @@
     if (!source) return '数据暂未加载，可稍后重试'
     if (type === 'article') return '按文章发布日期统计'
     if (type === 'fitness') return '修改记录文件后自动更新'
-    return '同步于 ' + new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(source.lastSuccessfulSync)) + ' · 提交次数'
+    return '同步于 ' + new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(source.lastSuccessfulSync)) + (type === 'github' ? ' · GitHub 贡献' : ' · 提交次数')
   }
   function select (type) {
+    if (types.indexOf(type) < 0 || state.selected === type) return
     state.selected = type
     try { localStorage.setItem('activity-calendar', type) } catch (e) {}
-    Array.prototype.forEach.call(roots(), arrange)
+    Array.prototype.forEach.call(roots(), function (root) { arrange(root, true) })
   }
-  function arrange (root) {
+  function arrange (root, animate) {
+    var selected = root.querySelector('[data-type="' + state.selected + '"]')
+    var before = window.getComputedStyle(selected).transform
+    if (root.activityAnimation) root.activityAnimation.cancel()
     types.forEach(function (type, i) {
-      var rank = (i - types.indexOf(state.selected) + 3) % 3
+      var rank = (i - types.indexOf(state.selected) + types.length) % types.length
       var card = root.querySelector('[data-type="' + type + '"]')
       card.dataset.rank = rank
-      card.setAttribute('aria-hidden', rank ? 'true' : 'false')
-      card.inert = rank !== 0
+      var content = card.querySelector('.activity-content')
+      content.setAttribute('aria-hidden', rank ? 'true' : 'false')
+      content.inert = rank !== 0
       var tab = root.querySelector('[data-select="' + type + '"]')
       tab.setAttribute('aria-pressed', type === state.selected ? 'true' : 'false')
+      tab.setAttribute('aria-expanded', rank ? 'false' : 'true')
+      tab.setAttribute('aria-label', (rank ? '切换到' : '当前：') + names[type])
     })
+    if (animate && selected.animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      root.activityAnimation = selected.animate([
+        { transform: before },
+        { transform: 'translate(18px, -14px) scale(.985)', offset: .4 },
+        { transform: 'translateY(132px) scale(1)' }
+      ], { duration: 560, easing: 'cubic-bezier(.22,.72,.2,1)' })
+    }
     root.querySelector('.activity-status').textContent = status(state.selected)
     var action = root.querySelector('.activity-action')
     action.hidden = state.selected === 'article'
-    action.textContent = state.selected === 'fitness' ? '编辑健身记录 ↗' : '去力扣刷题 ↗'
+    action.textContent = state.selected === 'fitness' ? '编辑健身记录 ↗' : state.selected === 'github' ? '查看 GitHub ↗' : '去力扣刷题 ↗'
     action.href = state.selected === 'fitness'
       ? 'https://github.com/sdracula/sdracula.github.io/edit/main/data/fitness.md'
-      : 'https://leetcode.cn/u/sdracula/'
+      : state.selected === 'github' ? 'https://github.com/sdracula' : 'https://leetcode.cn/u/sdracula/'
     root.querySelector('.activity-detail').textContent = '点击日期格查看当天记录'
   }
   function build (root) {
     root.innerHTML = ''
-    var controls = element('div', 'activity-controls')
-    controls.setAttribute('aria-label', '选择日历')
-    types.forEach(function (type) {
-      var button = element('button', '', names[type].replace('日历', ''))
-      button.type = 'button'; button.dataset.select = type
-      controls.appendChild(button)
-    })
-    root.appendChild(controls)
     var stack = element('div', 'activity-stack')
     var today = new Date(dateKey(new Date()) + 'T00:00:00+08:00')
     var start = new Date(today.getTime() - 364 * 86400000)
@@ -69,7 +76,13 @@
       var card = element('section', 'activity-card activity-' + type)
       card.dataset.type = type
       card.setAttribute('aria-label', names[type])
-      card.appendChild(element('h3', 'activity-heading', names[type]))
+      var heading = element('h3', 'activity-heading')
+      var switchButton = element('button', 'activity-switch')
+      switchButton.type = 'button'; switchButton.dataset.select = type
+      switchButton.appendChild(element('span', 'activity-name', names[type]))
+      var hint = element('span', 'activity-switch-hint', '点击切换 ↓')
+      hint.setAttribute('aria-hidden', 'true'); switchButton.appendChild(hint)
+      heading.appendChild(switchButton); card.appendChild(heading)
       var content = element('div', 'activity-content')
       var summary = element('div', 'activity-summary')
       summary.appendChild(element('span', '', dateKey(start) + ' — ' + dateKey(today)))
@@ -107,7 +120,7 @@
       ;['日', '', '二', '', '四', '', '六'].forEach(function (label) { labels.appendChild(element('span', '', label)) })
       plot.appendChild(labels); plot.appendChild(grid); content.appendChild(plot)
       var legend = element('div', 'activity-legend')
-      legend.appendChild(element('span', '', type === 'fitness' ? '按训练时长' : type === 'leetcode' ? '按提交次数（含重复提交）' : '按发表篇数'))
+      legend.appendChild(element('span', '', type === 'fitness' ? '按训练时长' : type === 'leetcode' ? '按提交次数（含重复提交）' : type === 'github' ? '按 GitHub 贡献次数' : '按发表篇数'))
       var levels = element('span', 'activity-levels', '少 ')
       for (var level = 0; level <= 4; level++) { var swatch = element('span', 'activity-swatch'); swatch.dataset.level = level; levels.appendChild(swatch) }
       levels.appendChild(document.createTextNode(' 多')); legend.appendChild(levels); content.appendChild(legend)
@@ -128,7 +141,7 @@
         var target = event.target.closest('button')
         if (!target) return
         if (target.dataset.select) select(target.dataset.select)
-        if (target.dataset.direction) select(types[(types.indexOf(state.selected) + Number(target.dataset.direction) + 3) % 3])
+        if (target.dataset.direction) select(types[(types.indexOf(state.selected) + Number(target.dataset.direction) + types.length) % types.length])
         if (target.dataset.date) {
           var info = dayInfo(target.dataset.calendar, target.dataset.date)
           var text = target.dataset.date + ' · ' + (info.pending ? '尚未同步，请等待下一次更新' : info.value + ' ' + units[target.dataset.calendar])
@@ -147,7 +160,7 @@
           var offset = { ArrowLeft: -7, ArrowRight: 7, ArrowUp: -1, ArrowDown: 1 }[event.key]
           var index = Math.max(0, Math.min(364, cells.indexOf(target) + offset))
           cells.forEach(function (cell) { cell.tabIndex = -1 }); cells[index].tabIndex = 0; cells[index].focus()
-        } else if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') select(types[(types.indexOf(state.selected) + (event.key === 'ArrowRight' ? 1 : 2)) % 3])
+        } else if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') select(types[(types.indexOf(state.selected) + (event.key === 'ArrowRight' ? 1 : types.length - 1)) % types.length])
         event.preventDefault()
       })
     }
@@ -160,14 +173,14 @@
     if (state.promise || Date.now() - state.fetched < 60000) return
     state.promise = Promise.all(types.map(function (type) {
       return fetch('/data/' + type + '.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw new Error('Calendar data unavailable'); return r.json() })
-        .then(function (data) { if (!data.days || (type === 'leetcode' && !Array.isArray(data.coverageYears))) throw new Error('Invalid calendar data'); state.data[type] = data })
+        .then(function (data) { if (!data.days || (type === 'leetcode' && !Array.isArray(data.coverageYears)) || (type === 'github' && (!data.coverageStart || !data.coverageEnd))) throw new Error('Invalid calendar data'); state.data[type] = data })
         .catch(function () {})
     })).then(function () { state.fetched = Date.now(); state.promise = null; renderAll() })
   }
   function schedule () { window.requestAnimationFrame(refresh) }
   window.sakuraActivityCalendars = { refresh: refresh }
   if (!document.getElementById('activity-calendar-style')) {
-    var style = element('link'); style.id = 'activity-calendar-style'; style.rel = 'stylesheet'; style.href = '/css/activity-calendars.css?v=20261010'; document.head.appendChild(style)
+    var style = element('link'); style.id = 'activity-calendar-style'; style.rel = 'stylesheet'; style.href = '/css/activity-calendars.css?v=20261010-four'; document.head.appendChild(style)
   }
   if (window.jQuery) window.jQuery(document).on('pjax:end.activityCalendars', schedule)
   window.addEventListener('pageshow', schedule); window.addEventListener('popstate', schedule)
