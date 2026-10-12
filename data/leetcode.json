@@ -5,7 +5,7 @@
   "metric": "submissions",
   "calendarDates": "upstream-date-labels",
   "todayTimezone": "Asia/Shanghai",
-  "lastSuccessfulSync": "2026-10-11T22:06:10.989Z",
+  "lastSuccessfulSync": "2026-10-12T06:08:30.009Z",
   "coverageYears": [
     2023,
     2024,
@@ -62,6 +62,7 @@
     "2026-07-06": 5,
     "2026-07-07": 6,
     "2026-07-08": 2,
-    "2026-07-09": 3
+    "2026-07-09": 3,
+    "2026-10-12": 2
   }
 }
