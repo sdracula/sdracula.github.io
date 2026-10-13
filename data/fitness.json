@@ -2,11 +2,12 @@
   "version": 1,
   "metric": "training-minutes",
   "source": "data/fitness.md",
-  "lastSuccessfulSync": "2026-10-13T00:48:48.330Z",
+  "lastSuccessfulSync": "2026-10-13T00:55:21.235Z",
   "days": {
     "2026-10-09": 60,
     "2026-10-10": 60,
-    "2026-10-11": 60
+    "2026-10-11": 60,
+    "2026-10-12": 60
   },
   "entries": [
     {
@@ -23,6 +24,12 @@
     },
     {
       "date": "2026-10-11",
+      "activity": "健身",
+      "minutes": 60,
+      "note": ""
+    },
+    {
+      "date": "2026-10-12",
       "activity": "健身",
       "minutes": 60,
       "note": ""
