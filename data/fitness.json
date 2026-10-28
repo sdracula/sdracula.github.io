@@ -2,7 +2,7 @@
   "version": 1,
   "metric": "training-minutes",
   "source": "data/fitness.md",
-  "lastSuccessfulSync": "2026-10-27T22:22:52.530Z",
+  "lastSuccessfulSync": "2026-10-28T05:54:11.369Z",
   "days": {
     "2026-10-09": 60,
     "2026-10-10": 60,
