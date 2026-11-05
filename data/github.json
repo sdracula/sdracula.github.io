@@ -6,9 +6,9 @@
   "source": "github-graphql",
   "calendarDates": "upstream-date-labels",
   "todayTimezone": "Asia/Shanghai",
-  "lastSuccessfulSync": "2026-11-04T19:52:05.013Z",
+  "lastSuccessfulSync": "2026-11-05T06:59:05.988Z",
   "coverageStart": "2025-11-06",
-  "coverageEnd": "2026-11-04",
+  "coverageEnd": "2026-11-05",
   "days": {
     "2026-10-11": 2,
     "2026-10-13": 1
